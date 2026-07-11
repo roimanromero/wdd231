@@ -1,0 +1,173 @@
+:root{
+    --coral:#E85C41;
+    --turquesa:#159A9C;
+    --oro:#F2B134;
+    --arena:#FAF1E4;
+    --panel:#FFFDF8;
+    --tinta:#22201D;
+    --tinta-suave:#5A5348;
+    --linea:#E4D8C3;
+    --radius:16px;
+    --font-display:'Fraunces', serif;
+    --font-body:'Work Sans', sans-serif;
+    --font-mono:'Space Mono', monospace;
+  }
+  *,*::before,*::after{box-sizing:border-box;}
+  html{scroll-behavior:smooth;}
+  body{
+    margin:0;
+    background:var(--arena);
+    color:var(--tinta);
+    font-family:var(--font-body);
+    line-height:1.65;
+  }
+  img,svg{display:block;max-width:100%;}
+  a{color:var(--turquesa);}
+  h1,h2,h3{font-family:var(--font-display);margin:0 0 .5rem;color:var(--tinta);}
+  .eyebrow{
+    font-family:var(--font-mono);
+    font-size:.72rem;
+    letter-spacing:.12em;
+    text-transform:uppercase;
+    color:var(--coral);
+    display:block;
+    margin-bottom:.4rem;
+  }
+  .wrap{max-width:1080px;margin:0 auto;padding:0 1.25rem;}
+
+  /* ---------- Hero ---------- */
+  .hero{background:var(--tinta);color:var(--arena);padding:3.5rem 0 0;}
+  .hero .wrap{display:flex;flex-direction:column;gap:.75rem;}
+  .hero .eyebrow{color:var(--oro);}
+  .hero h1{color:var(--arena);font-size:clamp(2rem,5vw,3.1rem);font-weight:700;line-height:1.05;}
+  .hero p.tagline{font-size:1.15rem;color:#EDE3D0;max-width:46ch;margin:0 0 1.5rem;}
+  .hero .meta{
+    display:flex;flex-wrap:wrap;gap:1.5rem;
+    font-family:var(--font-mono);font-size:.8rem;color:#C9BFA9;
+    padding-bottom:2rem;
+  }
+  .hero .meta b{color:var(--arena);}
+
+  /* ---------- Bunting divider (signature motif) ---------- */
+  .bunting{width:100%;height:34px;display:block;}
+
+  /* ---------- Section chrome ---------- */
+  section.doc{padding:3rem 0;border-bottom:1px solid var(--linea);}
+  section.doc:last-of-type{border-bottom:none;}
+  section.doc > .wrap > h2{font-size:1.6rem;}
+  .lede{color:var(--tinta-suave);max-width:70ch;}
+
+  /* ---------- Sticky index nav ---------- */
+  nav.toc{
+    position:sticky;top:0;z-index:5;
+    background:rgba(250,241,228,.94);
+    backdrop-filter:blur(4px);
+    border-bottom:1px solid var(--linea);
+  }
+  nav.toc ul{
+    list-style:none;margin:0;padding:0;
+    display:flex;gap:0;overflow-x:auto;
+    font-family:var(--font-mono);font-size:.78rem;
+  }
+  nav.toc a{
+    display:block;white-space:nowrap;padding:.9rem 1rem;color:var(--tinta-suave);text-decoration:none;
+    border-bottom:3px solid transparent;
+  }
+  nav.toc a:hover,nav.toc a:focus-visible{color:var(--coral);border-bottom-color:var(--coral);}
+
+  /* ---------- Goal / market cards ---------- */
+  .grid-3{display:grid;gap:1rem;grid-template-columns:1fr;margin-top:1.5rem;}
+  .card{
+    background:var(--panel);border:1px solid var(--linea);border-radius:var(--radius);
+    padding:1.25rem 1.4rem;
+  }
+  .card h3{font-size:1.05rem;}
+  .card p{color:var(--tinta-suave);margin:0;font-size:.95rem;}
+
+  /* ---------- Persona tickets ---------- */
+  .tickets{display:grid;gap:1.75rem;grid-template-columns:1fr;margin-top:1.75rem;}
+  .ticket{
+    position:relative;background:var(--panel);border-radius:14px;
+    box-shadow:0 6px 18px rgba(34,32,29,.08);
+  }
+  .ticket__body{padding:1.4rem 1.4rem 1.1rem;}
+  .ticket__role{
+    font-family:var(--font-mono);font-size:.7rem;letter-spacing:.1em;text-transform:uppercase;
+    color:var(--turquesa);
+  }
+  .ticket__name{font-family:var(--font-display);font-size:1.3rem;font-weight:600;margin:.2rem 0;}
+  .ticket__sub{color:var(--tinta-suave);font-size:.88rem;margin:0 0 .6rem;}
+  .ticket__perf{position:relative;border-top:2px dashed var(--linea);margin:0 1.4rem;}
+  .ticket__perf::before,.ticket__perf::after{
+    content:'';position:absolute;top:-10px;width:20px;height:20px;border-radius:50%;background:var(--arena);
+  }
+  .ticket__perf::before{left:-1.6rem;}
+  .ticket__perf::after{right:-1.6rem;}
+  .ticket__footer{padding:1rem 1.4rem 1.4rem;font-size:.88rem;color:var(--tinta-suave);}
+  .ticket__footer strong{color:var(--tinta);}
+  .ticket__stamp{
+    position:absolute;top:1.3rem;right:1.4rem;
+    font-family:var(--font-mono);font-size:.68rem;color:var(--oro);
+    border:1.5px solid var(--oro);border-radius:999px;padding:.15rem .55rem;
+    transform:rotate(6deg);
+  }
+
+  /* ---------- Scenarios ---------- */
+  .scenario{
+    display:flex;gap:1rem;padding:1.1rem 0;border-top:1px solid var(--linea);
+  }
+  .scenario:first-of-type{border-top:none;}
+  .scenario__num{
+    font-family:var(--font-mono);font-weight:700;color:var(--coral);font-size:1.1rem;flex:0 0 auto;
+  }
+  .scenario p{margin:0;color:var(--tinta-suave);}
+  .scenario strong{color:var(--tinta);}
+
+  /* ---------- SEO list ---------- */
+  ul.seo-list{margin:1.25rem 0 0;padding:0;list-style:none;display:grid;gap:.7rem;}
+  ul.seo-list li{
+    display:flex;gap:.7rem;align-items:flex-start;color:var(--tinta-suave);
+  }
+  ul.seo-list li::before{
+    content:'✓';color:var(--turquesa);font-weight:700;flex:0 0 auto;
+  }
+
+  /* ---------- Design brief ---------- */
+  .swatches{display:grid;grid-template-columns:repeat(2,1fr);gap:.9rem;margin-top:1.5rem;}
+  .swatch{border-radius:12px;overflow:hidden;border:1px solid var(--linea);}
+  .swatch__color{height:70px;}
+  .swatch__label{
+    background:var(--panel);padding:.55rem .75rem;font-family:var(--font-mono);font-size:.72rem;
+  }
+  .swatch__label b{display:block;font-family:var(--font-body);font-size:.85rem;color:var(--tinta);}
+  .type-sample{margin-top:1.75rem;background:var(--panel);border:1px solid var(--linea);border-radius:var(--radius);padding:1.5rem;}
+  .type-sample .display{font-family:var(--font-display);font-size:1.8rem;font-weight:600;margin:0 0 .3rem;}
+  .type-sample .body-copy{font-family:var(--font-body);color:var(--tinta-suave);margin:0 0 .6rem;}
+  .type-sample .mono-tag{font-family:var(--font-mono);font-size:.75rem;background:var(--arena);padding:.2rem .5rem;border-radius:6px;}
+  .mood{
+    margin-top:1.5rem;font-style:italic;color:var(--tinta-suave);border-left:3px solid var(--oro);padding-left:1rem;
+  }
+
+  /* ---------- Site map + wireframes ---------- */
+  .diagram-frame{
+    background:var(--panel);border:1px solid var(--linea);border-radius:var(--radius);
+    padding:1.5rem;margin-top:1.5rem;overflow-x:auto;
+  }
+  .wireframe-caption{
+    font-family:var(--font-mono);font-size:.72rem;color:var(--tinta-suave);text-transform:uppercase;
+    letter-spacing:.08em;margin:1.5rem 0 .4rem;
+  }
+
+  footer.doc-footer{
+    background:var(--tinta);color:#C9BFA9;text-align:center;padding:2rem 1rem;
+    font-family:var(--font-mono);font-size:.78rem;
+  }
+  footer.doc-footer b{color:var(--arena);}
+
+  /* ---------- Wider screens ---------- */
+  @media screen and (min-width:700px){
+    .grid-3{grid-template-columns:repeat(3,1fr);}
+    .tickets{grid-template-columns:repeat(3,1fr);}
+    .swatches{grid-template-columns:repeat(5,1fr);}
+    nav.toc ul{justify-content:center;}
+  }

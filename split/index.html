@@ -1,0 +1,533 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="Site plan for Manos de Quilla, the artisan division of the Barranquilla Chamber of Commerce — costume jewelry, weaving, hats, and basic jewelry.">
+<meta name="author" content="Tu Nombre">
+<title>Site Plan · Manos de Quilla — Barranquilla Chamber of Commerce</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,500;9..144,600;9..144,700&family=Work+Sans:wght@400;500;600&family=Space+Mono:wght@400;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="styles/main.css">
+<script src="scripts/main.js" defer></script>
+</head>
+<body>
+
+<header class="hero">
+  <div class="wrap">
+    <span class="eyebrow">Site Plan · WDD231</span>
+    <h1>Manos de Quilla</h1>
+    <p class="tagline">The artisan division of the Barranquilla Chamber of Commerce: costume jewelry, weaving, hats, and basic jewelry, with the flavor of Carnival and the rhythm of the street.</p>
+    <div class="meta">
+      <span>Prepared by: <b>Your Name</b></span>
+      <span>City: <b>Barranquilla, Atlántico</b></span>
+      <span>Course: <b>WDD231 — Frontend Web Development I</b></span>
+    </div>
+  </div>
+  <svg class="bunting" viewBox="0 0 1200 34" preserveAspectRatio="none" role="presentation" aria-hidden="true">
+    <defs>
+      <pattern id="bunting" width="120" height="34" patternUnits="userSpaceOnUse">
+        <polygon points="8,0 38,0 23,28" fill="#E85C41"/>
+        <polygon points="48,0 78,0 63,28" fill="#159A9C"/>
+        <polygon points="88,0 118,0 103,28" fill="#F2B134"/>
+      </pattern>
+    </defs>
+    <rect width="1200" height="34" fill="url(#bunting)"/>
+    <line x1="0" y1="1" x2="1200" y2="1" stroke="#FAF1E4" stroke-width="2" opacity=".5"/>
+  </svg>
+</header>
+
+<nav class="toc" aria-label="Document index">
+  <ul>
+    <li><a href="#proposito">Purpose</a></li>
+    <li><a href="#mercado">Market</a></li>
+    <li><a href="#objetivos">Goals</a></li>
+    <li><a href="#personas">Personas</a></li>
+    <li><a href="#escenarios">Scenarios</a></li>
+    <li><a href="#seo">SEO</a></li>
+    <li><a href="#marca">Design Brief</a></li>
+    <li><a href="#mapa">Site Map</a></li>
+    <li><a href="#wireframes">Wireframes</a></li>
+  </ul>
+</nav>
+
+<main>
+
+  <section class="doc" id="proposito">
+    <div class="wrap">
+      <span class="eyebrow">01 — Site Purpose</span>
+      <h2>A gathering place for coastal artisan commerce</h2>
+      <p class="lede">
+        Manos de Quilla is the Barranquilla Chamber of Commerce site dedicated to small and
+        medium-sized businesses in costume jewelry, weaving, hats, light textile industry, and
+        basic jewelry. The site connects artisans with customers, tourists, and other local
+        brands, offering a business directory, content about the city's culture (Carnival,
+        food, and beach life), and a clear path to joining the Chamber. The goal is to boost
+        the local economy by giving digital visibility to a trade that today is mostly sold
+        face-to-face, on the street and at neighborhood verbenas.
+      </p>
+    </div>
+  </section>
+
+  <section class="doc" id="mercado">
+    <div class="wrap">
+      <span class="eyebrow">02 — Target Market</span>
+      <h2>Who is the site speaking to?</h2>
+      <p class="lede">
+        Artisans and small workshops in Barranquilla and Atlántico who make costume jewelry,
+        weaving, hats, and basic jewelry, along with local buyers, Carnival-season visitors,
+        and urban brands looking to collaborate with coastal talent.
+      </p>
+    </div>
+  </section>
+
+  <section class="doc" id="objetivos">
+    <div class="wrap">
+      <span class="eyebrow">03 — Site Goals</span>
+      <h2>What the site needs to accomplish</h2>
+      <div class="grid-3">
+        <div class="card">
+          <h3>Visibility for the artisan</h3>
+          <p>Give every member business a directory listing with direct contact info, without relying only on social media.</p>
+        </div>
+        <div class="card">
+          <h3>New members</h3>
+          <p>Clearly explain the benefits of joining (non-profit, silver, and gold tiers) to attract more workshops and brands.</p>
+        </div>
+        <div class="card">
+          <h3>Cultural identity</h3>
+          <p>Position the Chamber as the trusted voice of artisan commerce tied to Carnival and coastal life.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="doc" id="personas">
+    <div class="wrap">
+      <span class="eyebrow">04 — User Personas</span>
+      <h2>Three personas, three reasons to visit the site</h2>
+      <div class="tickets">
+
+        <article class="ticket">
+          <span class="ticket__stamp">Artisan</span>
+          <div class="ticket__body">
+            <span class="ticket__role">Persona 01</span>
+            <p class="ticket__name">Yesenia Pacheco</p>
+            <p class="ticket__sub">42 years old · weaves palm hats and beach bags in her workshop in the Rebolo neighborhood.</p>
+          </div>
+          <div class="ticket__perf"></div>
+          <div class="ticket__footer">
+            Wants her workshop to be visible to tourists and boutique shops, and is interested in
+            the digital sales workshops offered by the Chamber.
+          </div>
+        </article>
+
+        <article class="ticket">
+          <span class="ticket__stamp">Entrepreneur</span>
+          <div class="ticket__body">
+            <span class="ticket__role">Persona 02</span>
+            <p class="ticket__name">Camilo Herrera</p>
+            <p class="ticket__sub">27 years old · designs urban jewelry with Carnival motifs and sells through Instagram and craft fairs.</p>
+          </div>
+          <div class="ticket__perf"></div>
+          <div class="ticket__footer">
+            Looking for brand partnerships, sponsorship for a booth at the Guacherna parade, and
+            networking with other creators in the industry.
+          </div>
+        </article>
+
+        <article class="ticket">
+          <span class="ticket__stamp">Visitor</span>
+          <div class="ticket__body">
+            <span class="ticket__role">Persona 03</span>
+            <p class="ticket__name">Laura Jiménez</p>
+            <p class="ticket__sub">34 years old · travels to Barranquilla during Carnival season looking for authentic crafts.</p>
+          </div>
+          <div class="ticket__perf"></div>
+          <div class="ticket__footer">
+            Wants to find real workshops near her hotel and meet the makers, avoiding generic
+            imported souvenirs.
+          </div>
+        </article>
+
+      </div>
+    </div>
+  </section>
+
+  <section class="doc" id="escenarios">
+    <div class="wrap">
+      <span class="eyebrow">05 — Scenarios</span>
+      <h2>How each persona uses the site</h2>
+
+      <div class="scenario">
+        <span class="scenario__num">01</span>
+        <p><strong>Yesenia</strong> registers in the <em>Directory</em> so her workshop appears under the weaving and hats category, uploads photos and contact info, and checks the Chamber's calendar of digital sales workshops.</p>
+      </div>
+      <div class="scenario">
+        <span class="scenario__num">02</span>
+        <p><strong>Camilo</strong> goes to <em>Join</em> to compare membership tiers, sees that the Silver tier includes a mention on the Chamber's social media and priority for a Carnival booth, and fills out the membership application.</p>
+      </div>
+      <div class="scenario">
+        <span class="scenario__num">03</span>
+        <p><strong>Laura</strong> visits <em>Discover</em> before her trip to read about Carnival and the artisan districts, then uses the <em>Directory</em> in list view to find jewelry and weaving workshops near her hotel.</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="doc" id="seo">
+    <div class="wrap">
+      <span class="eyebrow">06 — SEO Plan</span>
+      <h2>How the site gets found</h2>
+      <ul class="seo-list">
+        <li>Local keywords in titles, descriptions, and content: "Barranquilla handmade crafts", "Carnival jewelry", "handmade hats Atlántico", "Barranquilla artisan weaving".</li>
+        <li>Verify the site on the Chamber's Google Business Profile.</li>
+        <li>Get inbound links from every member business, craft fairs, and boutique hotels in the city.</li>
+        <li>Embed Google Analytics on all site pages.</li>
+        <li>Publish seasonal content on <em>Discover</em> before and during Carnival, when tourist traffic searching for local crafts peaks.</li>
+      </ul>
+    </div>
+  </section>
+
+  <section class="doc" id="marca">
+    <div class="wrap">
+      <span class="eyebrow">07 — Design Brief</span>
+      <h2>Palette, typography, and style</h2>
+      <p class="lede">
+        "Costeñita core" visual direction: the sparkle of Carnival and the warmth of the beach,
+        combined with an everyday urban edge — polished but never stiff.
+      </p>
+
+      <div class="swatches">
+        <div class="swatch">
+          <div class="swatch__color" style="background:#E85C41"></div>
+          <div class="swatch__label"><b>Primary</b>Carnival Coral · #E85C41</div>
+        </div>
+        <div class="swatch">
+          <div class="swatch__color" style="background:#159A9C"></div>
+          <div class="swatch__label"><b>Secondary</b>Caribbean Turquoise · #159A9C</div>
+        </div>
+        <div class="swatch">
+          <div class="swatch__color" style="background:#F2B134"></div>
+          <div class="swatch__label"><b>Accent</b>Guacherna Gold · #F2B134</div>
+        </div>
+        <div class="swatch">
+          <div class="swatch__color" style="background:#FAF1E4"></div>
+          <div class="swatch__label"><b>Background</b>Light Sand · #FAF1E4</div>
+        </div>
+        <div class="swatch">
+          <div class="swatch__color" style="background:#22201D"></div>
+          <div class="swatch__label"><b>Text</b>Night Ink · #22201D</div>
+        </div>
+      </div>
+
+      <div class="type-sample">
+        <p class="display">Handmade jewelry, weaving, and hats</p>
+        <p class="body-copy">Body text set in Work Sans — clear and comfortable for reading business listings, forms, and longer descriptions.</p>
+        <span class="mono-tag">Space Mono — labels, prices, and data</span>
+      </div>
+
+      <p class="mood">
+        Note: the headline typeface (Fraunces) gives it an artisanal, characterful touch; Work
+        Sans keeps the rest of the site legible and tidy. If the final project requires a single
+        typeface family, use Work Sans alone and reserve the 600–700 weights for headings.
+      </p>
+    </div>
+  </section>
+
+  <section class="doc" id="mapa">
+    <div class="wrap">
+      <span class="eyebrow">08 — Site Map</span>
+      <h2>Navigation structure</h2>
+      <p class="lede">Home, Discover, Directory, and Join are the four required pages for this course. About, Podcast, and Events are planned for future phases of the project.</p>
+
+      <div class="diagram-frame">
+        <svg viewBox="0 0 900 190" width="100%" role="img" aria-label="Site map: Manos de Quilla connects to Home, Discover, Directory, and Join as active pages, and to About, Podcast, and Events as future pages.">
+          <!-- root -->
+          <rect x="370" y="8" width="160" height="40" rx="8" fill="#22201D"/>
+          <text x="450" y="33" text-anchor="middle" fill="#FAF1E4" font-family="Space Mono, monospace" font-size="13">Manos de Quilla</text>
+
+          <!-- trunk -->
+          <line x1="450" y1="48" x2="450" y2="70" stroke="#5A5348" stroke-width="2"/>
+          <line x1="112" y1="70" x2="788" y2="70" stroke="#5A5348" stroke-width="2"/>
+
+          <!-- 7 drop lines -->
+          <line x1="112" y1="70" x2="112" y2="92" stroke="#5A5348" stroke-width="2"/>
+          <line x1="222" y1="70" x2="222" y2="92" stroke="#5A5348" stroke-width="2"/>
+          <line x1="332" y1="70" x2="332" y2="92" stroke="#5A5348" stroke-width="2"/>
+          <line x1="450" y1="70" x2="450" y2="92" stroke="#5A5348" stroke-width="2"/>
+          <line x1="568" y1="70" x2="568" y2="92" stroke="#5A5348" stroke-width="2"/>
+          <line x1="678" y1="70" x2="678" y2="92" stroke="#5A5348" stroke-width="2"/>
+          <line x1="788" y1="70" x2="788" y2="92" stroke="#5A5348" stroke-width="2"/>
+
+          <!-- active pages -->
+          <g font-family="Work Sans, sans-serif" font-size="13">
+            <rect x="62" y="92" width="100" height="38" rx="7" fill="#E85C41"/>
+            <text x="112" y="116" text-anchor="middle" fill="#FFFDF8">Home</text>
+
+            <rect x="172" y="92" width="100" height="38" rx="7" fill="#E85C41"/>
+            <text x="222" y="116" text-anchor="middle" fill="#FFFDF8">Discover</text>
+
+            <rect x="282" y="92" width="100" height="38" rx="7" fill="#E85C41"/>
+            <text x="332" y="116" text-anchor="middle" fill="#FFFDF8">Directory</text>
+
+            <rect x="400" y="92" width="100" height="38" rx="7" fill="#E85C41"/>
+            <text x="450" y="116" text-anchor="middle" fill="#FFFDF8">Join</text>
+
+            <!-- future pages -->
+            <rect x="518" y="92" width="100" height="38" rx="7" fill="none" stroke="#B9AF9C" stroke-width="1.5" stroke-dasharray="4 3"/>
+            <text x="568" y="116" text-anchor="middle" fill="#8A8271">About</text>
+
+            <rect x="628" y="92" width="100" height="38" rx="7" fill="none" stroke="#B9AF9C" stroke-width="1.5" stroke-dasharray="4 3"/>
+            <text x="678" y="116" text-anchor="middle" fill="#8A8271">Podcast</text>
+
+            <rect x="738" y="92" width="100" height="38" rx="7" fill="none" stroke="#B9AF9C" stroke-width="1.5" stroke-dasharray="4 3"/>
+            <text x="788" y="116" text-anchor="middle" fill="#8A8271">Events</text>
+          </g>
+
+          <g font-family="Space Mono, monospace" font-size="10" fill="#8A8271">
+            <text x="450" y="150" text-anchor="middle">■ active pages (required for the course)</text>
+            <text x="450" y="168" text-anchor="middle">┄ future pages (out of current scope)</text>
+          </g>
+        </svg>
+      </div>
+    </div>
+  </section>
+
+  <section class="doc" id="wireframes">
+    <div class="wrap">
+      <span class="eyebrow">09 — Wireframes</span>
+      <h2>Directory Page</h2>
+      <p class="lede">Low fidelity, on purpose: define structure and hierarchy before locking in final style.</p>
+
+      <p class="wireframe-caption">Desktop</p>
+      <div class="diagram-frame">
+        <svg viewBox="0 0 900 560" width="100%" role="img" aria-label="Desktop wireframe of the Directory page, with header, navigation, grid/list view controls, and nine business cards in a three-column grid.">
+          <rect width="900" height="560" fill="#FFFDF8"/>
+          <!-- header -->
+          <rect x="0" y="0" width="900" height="56" fill="#F1E7D5"/>
+          <rect x="24" y="16" width="24" height="24" fill="none" stroke="#8A8271" stroke-width="1.5"/>
+          <line x1="24" y1="16" x2="48" y2="40" stroke="#8A8271" stroke-width="1"/>
+          <line x1="48" y1="16" x2="24" y2="40" stroke="#8A8271" stroke-width="1"/>
+          <text x="58" y="33" font-family="Work Sans, sans-serif" font-size="15" font-weight="600" fill="#22201D">Manos de Quilla</text>
+          <text x="660" y="33" font-family="Work Sans, sans-serif" font-size="12" fill="#22201D">Home</text>
+          <text x="712" y="33" font-family="Work Sans, sans-serif" font-size="12" fill="#E85C41" text-decoration="underline">Directory</text>
+          <text x="782" y="33" font-family="Work Sans, sans-serif" font-size="12" fill="#22201D">Join</text>
+          <text x="832" y="33" font-family="Work Sans, sans-serif" font-size="12" fill="#22201D">Discover</text>
+
+          <!-- title -->
+          <text x="24" y="96" font-family="Fraunces, serif" font-size="26" font-weight="700" fill="#22201D">Directory</text>
+
+          <!-- grid/list toggle -->
+          <rect x="380" y="72" width="70" height="30" rx="5" fill="#22201D"/>
+          <text x="415" y="92" text-anchor="middle" font-family="Space Mono, monospace" font-size="11" fill="#FAF1E4">Grid</text>
+          <rect x="456" y="72" width="60" height="30" rx="5" fill="none" stroke="#B9AF9C"/>
+          <text x="486" y="92" text-anchor="middle" font-family="Space Mono, monospace" font-size="11" fill="#5A5348">List</text>
+
+          <!-- 3x3 business cards -->
+          <g font-family="Work Sans, sans-serif">
+
+            <g>
+              <rect x="24" y="116" width="268" height="130" rx="6" fill="#F1E7D5" stroke="#E4D8C3"/>
+              <rect x="24" y="116" width="268" height="30" rx="6" fill="#22201D"/>
+              <rect x="24" y="132" width="268" height="14" fill="#22201D"/>
+              <text x="36" y="136" font-size="12" font-weight="600" fill="#FAF1E4">Business Name</text>
+              <text x="280" y="136" text-anchor="end" font-size="9" fill="#C9BFA9">Business tagline</text>
+              <rect x="36" y="158" width="56" height="56" fill="none" stroke="#B9AF9C" stroke-width="1"/>
+              <line x1="36" y1="158" x2="92" y2="214" stroke="#B9AF9C" stroke-width="1"/>
+              <line x1="92" y1="158" x2="36" y2="214" stroke="#B9AF9C" stroke-width="1"/>
+              <text x="104" y="172" font-size="10" fill="#5A5348"><tspan font-weight="700" fill="#22201D">EMAIL: </tspan>info@negocio.com</text>
+              <text x="104" y="190" font-size="10" fill="#5A5348"><tspan font-weight="700" fill="#22201D">PHONE: </tspan>300 555 1234</text>
+              <text x="104" y="208" font-size="10" fill="#5A5348"><tspan font-weight="700" fill="#22201D">URL: </tspan>minegocio.com</text>
+            </g>
+            <g>
+              <rect x="304" y="116" width="268" height="130" rx="6" fill="#F1E7D5" stroke="#E4D8C3"/>
+              <rect x="304" y="116" width="268" height="30" rx="6" fill="#22201D"/>
+              <rect x="304" y="132" width="268" height="14" fill="#22201D"/>
+              <text x="316" y="136" font-size="12" font-weight="600" fill="#FAF1E4">Business Name</text>
+              <text x="560" y="136" text-anchor="end" font-size="9" fill="#C9BFA9">Business tagline</text>
+              <rect x="316" y="158" width="56" height="56" fill="none" stroke="#B9AF9C" stroke-width="1"/>
+              <line x1="316" y1="158" x2="372" y2="214" stroke="#B9AF9C" stroke-width="1"/>
+              <line x1="372" y1="158" x2="316" y2="214" stroke="#B9AF9C" stroke-width="1"/>
+              <text x="384" y="172" font-size="10" fill="#5A5348"><tspan font-weight="700" fill="#22201D">EMAIL: </tspan>info@negocio.com</text>
+              <text x="384" y="190" font-size="10" fill="#5A5348"><tspan font-weight="700" fill="#22201D">PHONE: </tspan>300 555 1234</text>
+              <text x="384" y="208" font-size="10" fill="#5A5348"><tspan font-weight="700" fill="#22201D">URL: </tspan>minegocio.com</text>
+            </g>
+            <g>
+              <rect x="584" y="116" width="268" height="130" rx="6" fill="#F1E7D5" stroke="#E4D8C3"/>
+              <rect x="584" y="116" width="268" height="30" rx="6" fill="#22201D"/>
+              <rect x="584" y="132" width="268" height="14" fill="#22201D"/>
+              <text x="596" y="136" font-size="12" font-weight="600" fill="#FAF1E4">Business Name</text>
+              <text x="840" y="136" text-anchor="end" font-size="9" fill="#C9BFA9">Business tagline</text>
+              <rect x="596" y="158" width="56" height="56" fill="none" stroke="#B9AF9C" stroke-width="1"/>
+              <line x1="596" y1="158" x2="652" y2="214" stroke="#B9AF9C" stroke-width="1"/>
+              <line x1="652" y1="158" x2="596" y2="214" stroke="#B9AF9C" stroke-width="1"/>
+              <text x="664" y="172" font-size="10" fill="#5A5348"><tspan font-weight="700" fill="#22201D">EMAIL: </tspan>info@negocio.com</text>
+              <text x="664" y="190" font-size="10" fill="#5A5348"><tspan font-weight="700" fill="#22201D">PHONE: </tspan>300 555 1234</text>
+              <text x="664" y="208" font-size="10" fill="#5A5348"><tspan font-weight="700" fill="#22201D">URL: </tspan>minegocio.com</text>
+            </g>
+            <g>
+              <rect x="24" y="258" width="268" height="130" rx="6" fill="#F1E7D5" stroke="#E4D8C3"/>
+              <rect x="24" y="258" width="268" height="30" rx="6" fill="#22201D"/>
+              <rect x="24" y="274" width="268" height="14" fill="#22201D"/>
+              <text x="36" y="278" font-size="12" font-weight="600" fill="#FAF1E4">Business Name</text>
+              <text x="280" y="278" text-anchor="end" font-size="9" fill="#C9BFA9">Business tagline</text>
+              <rect x="36" y="300" width="56" height="56" fill="none" stroke="#B9AF9C" stroke-width="1"/>
+              <line x1="36" y1="300" x2="92" y2="356" stroke="#B9AF9C" stroke-width="1"/>
+              <line x1="92" y1="300" x2="36" y2="356" stroke="#B9AF9C" stroke-width="1"/>
+              <text x="104" y="314" font-size="10" fill="#5A5348"><tspan font-weight="700" fill="#22201D">EMAIL: </tspan>info@negocio.com</text>
+              <text x="104" y="332" font-size="10" fill="#5A5348"><tspan font-weight="700" fill="#22201D">PHONE: </tspan>300 555 1234</text>
+              <text x="104" y="350" font-size="10" fill="#5A5348"><tspan font-weight="700" fill="#22201D">URL: </tspan>minegocio.com</text>
+            </g>
+            <g>
+              <rect x="304" y="258" width="268" height="130" rx="6" fill="#F1E7D5" stroke="#E4D8C3"/>
+              <rect x="304" y="258" width="268" height="30" rx="6" fill="#22201D"/>
+              <rect x="304" y="274" width="268" height="14" fill="#22201D"/>
+              <text x="316" y="278" font-size="12" font-weight="600" fill="#FAF1E4">Business Name</text>
+              <text x="560" y="278" text-anchor="end" font-size="9" fill="#C9BFA9">Business tagline</text>
+              <rect x="316" y="300" width="56" height="56" fill="none" stroke="#B9AF9C" stroke-width="1"/>
+              <line x1="316" y1="300" x2="372" y2="356" stroke="#B9AF9C" stroke-width="1"/>
+              <line x1="372" y1="300" x2="316" y2="356" stroke="#B9AF9C" stroke-width="1"/>
+              <text x="384" y="314" font-size="10" fill="#5A5348"><tspan font-weight="700" fill="#22201D">EMAIL: </tspan>info@negocio.com</text>
+              <text x="384" y="332" font-size="10" fill="#5A5348"><tspan font-weight="700" fill="#22201D">PHONE: </tspan>300 555 1234</text>
+              <text x="384" y="350" font-size="10" fill="#5A5348"><tspan font-weight="700" fill="#22201D">URL: </tspan>minegocio.com</text>
+            </g>
+            <g>
+              <rect x="584" y="258" width="268" height="130" rx="6" fill="#F1E7D5" stroke="#E4D8C3"/>
+              <rect x="584" y="258" width="268" height="30" rx="6" fill="#22201D"/>
+              <rect x="584" y="274" width="268" height="14" fill="#22201D"/>
+              <text x="596" y="278" font-size="12" font-weight="600" fill="#FAF1E4">Business Name</text>
+              <text x="840" y="278" text-anchor="end" font-size="9" fill="#C9BFA9">Business tagline</text>
+              <rect x="596" y="300" width="56" height="56" fill="none" stroke="#B9AF9C" stroke-width="1"/>
+              <line x1="596" y1="300" x2="652" y2="356" stroke="#B9AF9C" stroke-width="1"/>
+              <line x1="652" y1="300" x2="596" y2="356" stroke="#B9AF9C" stroke-width="1"/>
+              <text x="664" y="314" font-size="10" fill="#5A5348"><tspan font-weight="700" fill="#22201D">EMAIL: </tspan>info@negocio.com</text>
+              <text x="664" y="332" font-size="10" fill="#5A5348"><tspan font-weight="700" fill="#22201D">PHONE: </tspan>300 555 1234</text>
+              <text x="664" y="350" font-size="10" fill="#5A5348"><tspan font-weight="700" fill="#22201D">URL: </tspan>minegocio.com</text>
+            </g>
+            <g>
+              <rect x="24" y="400" width="268" height="130" rx="6" fill="#F1E7D5" stroke="#E4D8C3"/>
+              <rect x="24" y="400" width="268" height="30" rx="6" fill="#22201D"/>
+              <rect x="24" y="416" width="268" height="14" fill="#22201D"/>
+              <text x="36" y="420" font-size="12" font-weight="600" fill="#FAF1E4">Business Name</text>
+              <text x="280" y="420" text-anchor="end" font-size="9" fill="#C9BFA9">Business tagline</text>
+              <rect x="36" y="442" width="56" height="56" fill="none" stroke="#B9AF9C" stroke-width="1"/>
+              <line x1="36" y1="442" x2="92" y2="498" stroke="#B9AF9C" stroke-width="1"/>
+              <line x1="92" y1="442" x2="36" y2="498" stroke="#B9AF9C" stroke-width="1"/>
+              <text x="104" y="456" font-size="10" fill="#5A5348"><tspan font-weight="700" fill="#22201D">EMAIL: </tspan>info@negocio.com</text>
+              <text x="104" y="474" font-size="10" fill="#5A5348"><tspan font-weight="700" fill="#22201D">PHONE: </tspan>300 555 1234</text>
+              <text x="104" y="492" font-size="10" fill="#5A5348"><tspan font-weight="700" fill="#22201D">URL: </tspan>minegocio.com</text>
+            </g>
+            <g>
+              <rect x="304" y="400" width="268" height="130" rx="6" fill="#F1E7D5" stroke="#E4D8C3"/>
+              <rect x="304" y="400" width="268" height="30" rx="6" fill="#22201D"/>
+              <rect x="304" y="416" width="268" height="14" fill="#22201D"/>
+              <text x="316" y="420" font-size="12" font-weight="600" fill="#FAF1E4">Business Name</text>
+              <text x="560" y="420" text-anchor="end" font-size="9" fill="#C9BFA9">Business tagline</text>
+              <rect x="316" y="442" width="56" height="56" fill="none" stroke="#B9AF9C" stroke-width="1"/>
+              <line x1="316" y1="442" x2="372" y2="498" stroke="#B9AF9C" stroke-width="1"/>
+              <line x1="372" y1="442" x2="316" y2="498" stroke="#B9AF9C" stroke-width="1"/>
+              <text x="384" y="456" font-size="10" fill="#5A5348"><tspan font-weight="700" fill="#22201D">EMAIL: </tspan>info@negocio.com</text>
+              <text x="384" y="474" font-size="10" fill="#5A5348"><tspan font-weight="700" fill="#22201D">PHONE: </tspan>300 555 1234</text>
+              <text x="384" y="492" font-size="10" fill="#5A5348"><tspan font-weight="700" fill="#22201D">URL: </tspan>minegocio.com</text>
+            </g>
+            <g>
+              <rect x="584" y="400" width="268" height="130" rx="6" fill="#F1E7D5" stroke="#E4D8C3"/>
+              <rect x="584" y="400" width="268" height="30" rx="6" fill="#22201D"/>
+              <rect x="584" y="416" width="268" height="14" fill="#22201D"/>
+              <text x="596" y="420" font-size="12" font-weight="600" fill="#FAF1E4">Business Name</text>
+              <text x="840" y="420" text-anchor="end" font-size="9" fill="#C9BFA9">Business tagline</text>
+              <rect x="596" y="442" width="56" height="56" fill="none" stroke="#B9AF9C" stroke-width="1"/>
+              <line x1="596" y1="442" x2="652" y2="498" stroke="#B9AF9C" stroke-width="1"/>
+              <line x1="652" y1="442" x2="596" y2="498" stroke="#B9AF9C" stroke-width="1"/>
+              <text x="664" y="456" font-size="10" fill="#5A5348"><tspan font-weight="700" fill="#22201D">EMAIL: </tspan>info@negocio.com</text>
+              <text x="664" y="474" font-size="10" fill="#5A5348"><tspan font-weight="700" fill="#22201D">PHONE: </tspan>300 555 1234</text>
+              <text x="664" y="492" font-size="10" fill="#5A5348"><tspan font-weight="700" fill="#22201D">URL: </tspan>minegocio.com</text>
+            </g>
+          </g>
+        </svg>
+      </div>
+
+      <p class="wireframe-caption">Mobile</p>
+      <div class="diagram-frame">
+        <svg viewBox="0 0 380 720" width="260" role="img" aria-label="Mobile wireframe of the Directory page, with a header featuring a hamburger menu, view controls, and business cards stacked in a single column.">
+          <rect width="380" height="720" fill="#FFFDF8"/>
+          <!-- header -->
+          <rect x="0" y="0" width="380" height="64" fill="#F1E7D5"/>
+          <rect x="16" y="18" width="26" height="26" fill="none" stroke="#8A8271" stroke-width="1.5"/>
+          <line x1="16" y1="18" x2="42" y2="44" stroke="#8A8271" stroke-width="1"/>
+          <line x1="42" y1="18" x2="16" y2="44" stroke="#8A8271" stroke-width="1"/>
+          <text x="52" y="36" font-family="Work Sans, sans-serif" font-size="14" font-weight="600" fill="#22201D">Manos de Quilla</text>
+          <g>
+            <line x1="330" y1="24" x2="358" y2="24" stroke="#22201D" stroke-width="2.5"/>
+            <line x1="330" y1="32" x2="358" y2="32" stroke="#22201D" stroke-width="2.5"/>
+            <line x1="330" y1="40" x2="358" y2="40" stroke="#22201D" stroke-width="2.5"/>
+          </g>
+
+          <!-- title + toggle -->
+          <text x="16" y="104" font-family="Fraunces, serif" font-size="24" font-weight="700" fill="#22201D">Directory</text>
+          <rect x="16" y="120" width="110" height="32" rx="5" fill="#22201D"/>
+          <text x="71" y="141" text-anchor="middle" font-family="Space Mono, monospace" font-size="11" fill="#FAF1E4">Grid</text>
+          <rect x="134" y="120" width="80" height="32" rx="5" fill="none" stroke="#B9AF9C"/>
+          <text x="174" y="141" text-anchor="middle" font-family="Space Mono, monospace" font-size="11" fill="#5A5348">List</text>
+
+          <!-- stacked cards -->
+          <g font-family="Work Sans, sans-serif">
+
+            <g>
+              <rect x="16" y="172" width="348" height="130" rx="6" fill="#F1E7D5" stroke="#E4D8C3"/>
+              <rect x="16" y="172" width="348" height="30" rx="6" fill="#22201D"/>
+              <rect x="16" y="188" width="348" height="14" fill="#22201D"/>
+              <text x="28" y="192" font-size="13" font-weight="600" fill="#FAF1E4">Business Name</text>
+              <text x="352" y="192" text-anchor="end" font-size="9" fill="#C9BFA9">Business tagline</text>
+              <rect x="28" y="214" width="60" height="60" fill="none" stroke="#B9AF9C" stroke-width="1"/>
+              <line x1="28" y1="214" x2="88" y2="274" stroke="#B9AF9C" stroke-width="1"/>
+              <line x1="88" y1="214" x2="28" y2="274" stroke="#B9AF9C" stroke-width="1"/>
+              <text x="100" y="230" font-size="11" fill="#5A5348"><tspan font-weight="700" fill="#22201D">EMAIL: </tspan>info@negocio.com</text>
+              <text x="100" y="250" font-size="11" fill="#5A5348"><tspan font-weight="700" fill="#22201D">PHONE: </tspan>300 555 1234</text>
+              <text x="100" y="270" font-size="11" fill="#5A5348"><tspan font-weight="700" fill="#22201D">URL: </tspan>minegocio.com</text>
+            </g>
+
+            <g>
+              <rect x="16" y="318" width="348" height="130" rx="6" fill="#F1E7D5" stroke="#E4D8C3"/>
+              <rect x="16" y="318" width="348" height="30" rx="6" fill="#22201D"/>
+              <rect x="16" y="334" width="348" height="14" fill="#22201D"/>
+              <text x="28" y="338" font-size="13" font-weight="600" fill="#FAF1E4">Business Name</text>
+              <text x="352" y="338" text-anchor="end" font-size="9" fill="#C9BFA9">Business tagline</text>
+              <rect x="28" y="360" width="60" height="60" fill="none" stroke="#B9AF9C" stroke-width="1"/>
+              <line x1="28" y1="360" x2="88" y2="420" stroke="#B9AF9C" stroke-width="1"/>
+              <line x1="88" y1="360" x2="28" y2="420" stroke="#B9AF9C" stroke-width="1"/>
+              <text x="100" y="376" font-size="11" fill="#5A5348"><tspan font-weight="700" fill="#22201D">EMAIL: </tspan>info@negocio.com</text>
+              <text x="100" y="396" font-size="11" fill="#5A5348"><tspan font-weight="700" fill="#22201D">PHONE: </tspan>300 555 1234</text>
+              <text x="100" y="416" font-size="11" fill="#5A5348"><tspan font-weight="700" fill="#22201D">URL: </tspan>minegocio.com</text>
+            </g>
+
+            <g>
+              <rect x="16" y="464" width="348" height="130" rx="6" fill="#F1E7D5" stroke="#E4D8C3"/>
+              <rect x="16" y="464" width="348" height="30" rx="6" fill="#22201D"/>
+              <rect x="16" y="480" width="348" height="14" fill="#22201D"/>
+              <text x="28" y="484" font-size="13" font-weight="600" fill="#FAF1E4">Business Name</text>
+              <text x="352" y="484" text-anchor="end" font-size="9" fill="#C9BFA9">Business tagline</text>
+              <rect x="28" y="506" width="60" height="60" fill="none" stroke="#B9AF9C" stroke-width="1"/>
+              <line x1="28" y1="506" x2="88" y2="566" stroke="#B9AF9C" stroke-width="1"/>
+              <line x1="88" y1="506" x2="28" y2="566" stroke="#B9AF9C" stroke-width="1"/>
+              <text x="100" y="522" font-size="11" fill="#5A5348"><tspan font-weight="700" fill="#22201D">EMAIL: </tspan>info@negocio.com</text>
+              <text x="100" y="542" font-size="11" fill="#5A5348"><tspan font-weight="700" fill="#22201D">PHONE: </tspan>300 555 1234</text>
+              <text x="100" y="562" font-size="11" fill="#5A5348"><tspan font-weight="700" fill="#22201D">URL: </tspan>minegocio.com</text>
+            </g>
+          </g>
+        </svg>
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<footer class="doc-footer">
+  <p><b>Manos de Quilla</b> · Barranquilla Chamber of Commerce</p>
+  <p>Site plan — WDD231 class project · Prepared by <b>Your Name</b></p>
+  <p id="lastModified"></p>
+</footer>
+
+</body>
+</html>
