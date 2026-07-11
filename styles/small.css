@@ -1,0 +1,329 @@
+/* ============================================
+   Design tokens
+   ============================================ */
+:root {
+  --color-ink:        #1B2430;   /* deep navy — headers, text */
+  --color-ink-soft:   #384454;   /* lighter navy for secondary text */
+  --color-paper:      #F7F4EE;   /* warm off-white page background */
+  --color-panel:      #FFFFFF;   /* card / panel background */
+  --color-line:       #DCD6C9;   /* hairline borders */
+  --color-amber:      #E8A33D;   /* primary accent — completed / focus */
+  --color-teal:       #3E7C7C;   /* secondary accent — links / hover */
+  --color-teal-dark:  #2C5A5A;
+
+  --font-face: 'Space Grotesk', 'Segoe UI', sans-serif;
+
+  --radius-sm: 4px;
+  --radius-md: 10px;
+
+  --space-1: 0.5rem;
+  --space-2: 1rem;
+  --space-3: 1.5rem;
+  --space-4: 2.5rem;
+}
+
+/* ============================================
+   Base
+   ============================================ */
+html {
+  font-family: var(--font-face);
+  background-color: var(--color-paper);
+  color: var(--color-ink);
+}
+
+body {
+  font-size: 1rem;
+  line-height: 1.6;
+}
+
+h1, h2 {
+  font-family: var(--font-face);
+  font-weight: 700;
+  letter-spacing: -0.01em;
+}
+
+h1 {
+  font-size: 1.9rem;
+  padding: var(--space-3) var(--space-2) var(--space-2);
+}
+
+h2 {
+  font-size: 1rem;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+}
+
+a:focus-visible,
+button:focus-visible {
+  outline: 3px solid var(--color-teal);
+  outline-offset: 2px;
+}
+
+/* ============================================
+   Header + branding
+   ============================================ */
+.site-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  padding: var(--space-2);
+  background-color: var(--color-panel);
+  border-bottom: 1px solid var(--color-line);
+  position: sticky;
+  top: 0;
+  z-index: 10;
+}
+
+.brand {
+  display: flex;
+  align-items: center;
+  gap: var(--space-1);
+}
+
+.brand__mark {
+  border-radius: var(--radius-sm);
+}
+
+.brand__name {
+  font-weight: 600;
+  font-size: 1.05rem;
+}
+
+/* Hamburger button — small screens only */
+.hamburger {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 5px;
+  width: 42px;
+  height: 42px;
+  padding: 8px;
+  border-radius: var(--radius-sm);
+}
+
+.hamburger:hover {
+  background-color: var(--color-paper);
+}
+
+.hamburger__bar {
+  display: block;
+  height: 2px;
+  width: 100%;
+  background-color: var(--color-ink);
+  border-radius: 2px;
+  transition: transform 0.2s ease, opacity 0.2s ease;
+}
+
+.hamburger[aria-expanded="true"] .hamburger__bar:nth-child(1) {
+  transform: translateY(7px) rotate(45deg);
+}
+.hamburger[aria-expanded="true"] .hamburger__bar:nth-child(2) {
+  opacity: 0;
+}
+.hamburger[aria-expanded="true"] .hamburger__bar:nth-child(3) {
+  transform: translateY(-7px) rotate(-45deg);
+}
+
+/* Nav — collapsed by default on small screens */
+.primary-nav {
+  flex-basis: 100%;
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.25s ease;
+  background-color: var(--color-ink);
+  border-radius: var(--radius-sm);
+  margin-top: var(--space-1);
+}
+
+.primary-nav.is-open {
+  max-height: 220px;
+}
+
+.primary-nav ul {
+  display: flex;
+  flex-direction: column;
+}
+
+.primary-nav a {
+  display: block;
+  padding: var(--space-2);
+  color: var(--color-paper);
+  font-weight: 500;
+  border-bottom: 1px solid rgba(247, 244, 238, 0.12);
+}
+
+.primary-nav li:last-child a {
+  border-bottom: none;
+}
+
+.primary-nav a:hover,
+.primary-nav a:focus-visible {
+  background-color: var(--color-teal-dark);
+}
+
+.primary-nav a[aria-current="page"] {
+  color: var(--color-amber);
+  box-shadow: inset 3px 0 0 var(--color-amber);
+}
+
+/* ============================================
+   Main layout — single column on small screens
+   ============================================ */
+main {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-3);
+  padding: 0 var(--space-2) var(--space-4);
+  max-width: 1100px;
+  margin: 0 auto;
+}
+
+section h2 {
+  background-color: var(--color-ink);
+  color: var(--color-paper);
+  padding: var(--space-1) var(--space-2);
+  border-radius: var(--radius-sm) var(--radius-sm) 0 0;
+}
+
+.about, .photo, .courses {
+  background-color: var(--color-panel);
+  border: 1px solid var(--color-line);
+  border-radius: var(--radius-md);
+  overflow: hidden;
+}
+
+.about p {
+  padding: var(--space-2);
+  color: var(--color-ink-soft);
+}
+
+.photo img {
+  width: 100%;
+  height: auto;
+  padding: var(--space-2);
+}
+
+/* ============================================
+   Course filters + cards
+   ============================================ */
+.course-filters {
+  display: flex;
+  gap: var(--space-1);
+  padding: var(--space-2);
+  flex-wrap: wrap;
+}
+
+.course-filters button {
+  flex: 1 1 auto;
+  min-width: 90px;
+  padding: var(--space-1) var(--space-2);
+  border: 1px solid var(--color-line);
+  border-radius: var(--radius-sm);
+  background-color: var(--color-paper);
+  font-weight: 600;
+  transition: background-color 0.15s ease, color 0.15s ease, border-color 0.15s ease;
+}
+
+.course-filters button:hover {
+  border-color: var(--color-teal);
+  color: var(--color-teal-dark);
+}
+
+.course-filters button.is-active {
+  background-color: var(--color-ink);
+  border-color: var(--color-ink);
+  color: var(--color-paper);
+}
+
+.course-list {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-1);
+  padding: 0 var(--space-2) var(--space-2);
+}
+
+.course-card {
+  display: flex;
+  align-items: center;
+  gap: var(--space-2);
+  padding: var(--space-2);
+  border: 1px solid var(--color-line);
+  border-left: 5px solid var(--color-line);
+  border-radius: var(--radius-sm);
+  background-color: var(--color-paper);
+}
+
+.course-card.is-completed {
+  border-left-color: var(--color-amber);
+  background-color: #FDF3E2;
+}
+
+.course-card__code {
+  font-weight: 700;
+  font-size: 0.95rem;
+  white-space: nowrap;
+}
+
+.course-card__title {
+  color: var(--color-ink-soft);
+  font-size: 0.9rem;
+  flex: 1;
+}
+
+.course-card__status {
+  font-size: 0.75rem;
+  font-weight: 600;
+  padding: 2px 8px;
+  border-radius: 999px;
+  background-color: var(--color-line);
+  color: var(--color-ink);
+  white-space: nowrap;
+}
+
+.course-card.is-completed .course-card__status {
+  background-color: var(--color-amber);
+  color: var(--color-ink);
+}
+
+.course-total {
+  padding: var(--space-2);
+  border-top: 1px solid var(--color-line);
+  font-weight: 600;
+  text-align: center;
+}
+
+/* ============================================
+   Footer
+   ============================================ */
+.site-footer {
+  background-color: var(--color-ink);
+  color: var(--color-paper);
+  text-align: center;
+  padding: var(--space-3) var(--space-2);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: var(--space-1);
+}
+
+.footer__social {
+  display: flex;
+  gap: var(--space-2);
+  margin-bottom: var(--space-1);
+}
+
+.footer__social a {
+  color: var(--color-paper);
+  transition: color 0.15s ease;
+}
+
+.footer__social a:hover {
+  color: var(--color-amber);
+}
+
+.footer__meta,
+.footer__modified {
+  font-size: 0.85rem;
+  color: #C9CFD8;
+}

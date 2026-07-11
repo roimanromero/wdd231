@@ -1,0 +1,6 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 320" role="img" aria-label="Placeholder student photo">
+  <rect width="320" height="320" fill="#DDE3E8"/>
+  <circle cx="160" cy="128" r="56" fill="#B7C2CC"/>
+  <path d="M56 300c0-64 46-104 104-104s104 40 104 104" fill="#B7C2CC"/>
+  <text x="160" y="290" font-family="'Space Grotesk', sans-serif" font-size="14" fill="#5A6570" text-anchor="middle">Replace with your photo</text>
+</svg>
