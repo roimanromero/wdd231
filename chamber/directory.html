@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Business Directory | Manos de Quilla — Barranquilla Chamber of Commerce</title>
+  <meta name="description" content="Browse artisan member businesses of Manos de Quilla, the Barranquilla Chamber of Commerce division for jewelry, weaving, hats, and handcrafted accessories." />
+  <meta name="author" content="Your Name" />
+
+  <!-- Favicon -->
+  <link rel="icon" type="image/svg+xml" href="images/favicon.svg" />
+
+  <!-- Facebook / Open Graph meta -->
+  <meta property="og:title" content="Manos de Quilla — Barranquilla Chamber of Commerce" />
+  <meta property="og:description" content="Discover handmade jewelry, weaving, hats, and accessory businesses from artisans across Barranquilla, Colombia." />
+  <meta property="og:image" content="https://roimanromero.github.io/wdd231/chamber/images/social-share.svg" />
+  <meta property="og:url" content="https://roimanromero.github.io/wdd231/chamber/directory.html" />
+  <meta property="og:type" content="website" />
+
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:wght@600;700&family=Work+Sans:wght@400;500;600;700&family=Space+Mono:wght@400;700&display=swap" rel="stylesheet" />
+
+  <!-- Styles: normalize first, then small (mobile-first), then larger (breakpoints) -->
+  <link rel="stylesheet" href="css/normalize.css" />
+  <link rel="stylesheet" href="css/small.css" />
+  <link rel="stylesheet" href="css/larger.css" />
+</head>
+<body>
+
+  <header class="site-header">
+    <div class="header-inner">
+      <a href="index.html" class="brand">
+        <img src="images/favicon.svg" alt="Manos de Quilla logo" />
+        <span class="brand-text">
+          <span class="brand-name">Manos de Quilla</span>
+          <span class="brand-tag">Barranquilla Chamber of Commerce</span>
+        </span>
+      </a>
+
+      <button id="navToggle" class="nav-toggle" aria-expanded="false" aria-controls="primaryNav" aria-label="Toggle navigation menu">
+        <span></span>
+      </button>
+
+      <nav id="primaryNav" class="primary-nav">
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="discover.html">Discover</a></li>
+          <li><a href="directory.html" aria-current="page">Directory</a></li>
+          <li><a href="join.html">Join</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main class="directory-main">
+    <div class="directory-intro">
+      <h1>Business Directory</h1>
+      <p>Meet the artisans, workshops, and designers behind Barranquilla's jewelry, weaving, hats, and handcrafted accessories. Every business listed here is a member of Manos de Quilla.</p>
+    </div>
+
+    <div class="directory-toolbar">
+      <p class="member-count" id="memberCount">Loading members…</p>
+      <div class="view-toggle" role="group" aria-label="Directory view selection">
+        <button id="gridView" class="active" type="button">Grid</button>
+        <button id="listView" type="button">List</button>
+      </div>
+    </div>
+
+    <article id="directoryList" class="directory-list">
+      <p class="loading-message">Loading member directory…</p>
+    </article>
+  </main>
+
+  <footer class="site-footer">
+    <div class="footer-inner">
+      <div class="footer-contact">
+        <p class="footer-brand">Manos de Quilla</p>
+        <p>Barranquilla Chamber of Commerce · Artisan Division</p>
+        <p>Calle 72 #45-10, Riomar, Barranquilla, Atlántico, Colombia</p>
+        <p>Email: <a href="mailto:info@manosdequilla.example.com">info@manosdequilla.example.com</a> · Phone: 300 555 1200</p>
+      </div>
+      <div class="footer-dev">
+        <p>Roiman Romero</p>
+        <p>WDD 231 · Web Frontend Development I</p>
+        <p>&copy; <span id="currentYear"></span> Manos de Quilla</p>
+        <p>Last Modified: <span id="lastModified"></span></p>
+      </div>
+    </div>
+  </footer>
+
+  <script src="js/directory.js"></script>
+</body>
+</html>

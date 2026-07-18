@@ -1,0 +1,83 @@
+/* ==========================================================================
+   Manos de Quilla — larger.css
+   Wider-viewport overrides, mobile-first breakpoints
+   ========================================================================== */
+
+@media (min-width: 640px) {
+  .directory-list {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .directory-list.list-view {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (min-width: 768px) {
+  .nav-toggle {
+    display: none;
+  }
+
+  .primary-nav {
+    position: static;
+    max-height: none;
+    overflow: visible;
+    background: none;
+    border-bottom: none;
+  }
+
+  .primary-nav ul {
+    flex-direction: row;
+    padding: 0;
+    gap: 1.5rem;
+  }
+
+  .primary-nav a {
+    padding: 0.4rem 0.1rem;
+    border-bottom: 2px solid transparent;
+  }
+
+  .primary-nav a:hover,
+  .primary-nav a[aria-current="page"] {
+    border-bottom-color: var(--color-primary);
+  }
+
+  .primary-nav li:last-child a {
+    border-bottom: 2px solid transparent;
+  }
+
+  .primary-nav a[aria-current="page"]:last-child {
+    border-bottom-color: var(--color-primary);
+  }
+
+  .directory-intro h1 {
+    font-size: 2.25rem;
+  }
+
+  .footer-inner {
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: flex-start;
+  }
+
+  .footer-dev {
+    border-top: none;
+    padding-top: 0;
+    text-align: right;
+  }
+}
+
+@media (min-width: 960px) {
+  .directory-list {
+    grid-template-columns: repeat(3, 1fr);
+  }
+
+  .directory-list.list-view {
+    grid-template-columns: 1fr;
+  }
+
+  .directory-list.list-view .member-card img {
+    width: 130px;
+    height: 100px;
+  }
+}

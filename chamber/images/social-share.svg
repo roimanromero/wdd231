@@ -1,0 +1,9 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 630" width="1200" height="630">
+  <rect width="1200" height="630" fill="#FAF1E4"/>
+  <rect width="1200" height="630" fill="none" stroke="#E85C41" stroke-width="16"/>
+  <circle cx="220" cy="315" r="120" fill="#159A9C"/>
+  <circle cx="220" cy="315" r="70" fill="#F2B134"/>
+  <text x="420" y="290" font-family="Georgia, 'Fraunces', serif" font-size="72" font-weight="700" fill="#22201D">Manos de Quilla</text>
+  <text x="420" y="350" font-family="Arial, 'Work Sans', sans-serif" font-size="30" fill="#22201D">Barranquilla Chamber of Commerce</text>
+  <text x="420" y="400" font-family="Arial, 'Work Sans', sans-serif" font-size="26" fill="#159A9C">Jewelry · Weaving · Handbags · Carnival Craft</text>
+</svg>

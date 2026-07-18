@@ -1,0 +1,6 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 300 200" width="300" height="200">
+  <rect width="300" height="200" fill="#FAF1E4"/>
+  <circle cx="150" cy="90" r="55" fill="#E85C41"/>
+  <text x="150" y="105" font-family="Work Sans, Arial, sans-serif" font-size="42" font-weight="700" fill="#FAF1E4" text-anchor="middle">AA</text>
+  <text x="150" y="175" font-family="Work Sans, Arial, sans-serif" font-size="14" fill="#22201D" text-anchor="middle">Earrings & Small Jewelry</text>
+</svg>

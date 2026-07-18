@@ -1,0 +1,92 @@
+{
+  "members": [
+    {
+      "name": "Manos de Oro Joyería",
+      "tagline": "Fine gold and silver jewelry, handmade since 1998",
+      "address": "Calle 72 #45-10, Riomar, Barranquilla",
+      "phone": "300 555 1201",
+      "url": "https://manosdeoro.example.com",
+      "image": "manos-de-oro.webp",
+      "membership": 3,
+      "category": "Fine Jewelry",
+      "founded": 1998
+    },
+    {
+      "name": "Trenzas del Caribe",
+      "tagline": "Palm-leaf hats and beach bags woven by hand",
+      "address": "Carrera 8 #45-22, Rebolo, Barranquilla",
+      "phone": "300 555 1202",
+      "url": "https://trenzasdelcaribe.example.com",
+      "image": "trenzas-del-caribe.webp",
+      "membership": 2,
+      "category": "Weaving & Hats",
+      "founded": 2010
+    },
+    {
+      "name": "Carnaval Bijou",
+      "tagline": "Costume jewelry inspired by Carnival de Barranquilla",
+      "address": "Calle 84 #52-30, El Prado, Barranquilla",
+      "phone": "300 555 1203",
+      "url": "https://carnavalbijou.example.com",
+      "image": "carnaval-bijou.webp",
+      "membership": 3,
+      "category": "Costume Jewelry",
+      "founded": 2016
+    },
+    {
+      "name": "Bolsos Rebolo",
+      "tagline": "Handcrafted leather and canvas handbags",
+      "address": "Carrera 15 #38-05, Rebolo, Barranquilla",
+      "phone": "300 555 1204",
+      "url": "https://bolsosrebolo.example.com",
+      "image": "bolsos-rebolo.webp",
+      "membership": 1,
+      "category": "Handbags & Accessories",
+      "founded": 2019
+    },
+    {
+      "name": "Aretes La Arenosa",
+      "tagline": "Lightweight earrings in filigree and tagua seed",
+      "address": "Calle 70 #50-18, Boston, Barranquilla",
+      "phone": "300 555 1205",
+      "url": "https://areteslaarenosa.example.com",
+      "image": "aretes-la-arenosa.webp",
+      "membership": 2,
+      "category": "Earrings & Small Jewelry",
+      "founded": 2015
+    },
+    {
+      "name": "Sombreros Vueltiao Atlántico",
+      "tagline": "Traditional woven hats from local caña flecha",
+      "address": "Carrera 44 #30-12, Barrio Abajo, Barranquilla",
+      "phone": "300 555 1206",
+      "url": "https://sombrerosvueltiao.example.com",
+      "image": "sombreros-vueltiao.webp",
+      "membership": 1,
+      "category": "Weaving & Hats",
+      "founded": 2005
+    },
+    {
+      "name": "Cuero y Cuentas",
+      "tagline": "Leather and beadwork accessories, bracelets to belts",
+      "address": "Calle 53 #46-09, Centro, Barranquilla",
+      "phone": "300 555 1207",
+      "url": "https://cueroycuentas.example.com",
+      "image": "cuero-y-cuentas.webp",
+      "membership": 2,
+      "category": "Handbags & Accessories",
+      "founded": 2013
+    },
+    {
+      "name": "Orfebrería Costeña",
+      "tagline": "Artisan metalwork jewelry with coastal motifs",
+      "address": "Calle 76 #54-40, Alto Prado, Barranquilla",
+      "phone": "300 555 1208",
+      "url": "https://orfebreriacostena.example.com",
+      "image": "orfebreria-costena.webp",
+      "membership": 3,
+      "category": "Fine Jewelry",
+      "founded": 2001
+    }
+  ]
+}
