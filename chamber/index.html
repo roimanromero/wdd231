@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Home | Manos de Quilla — Barranquilla Chamber of Commerce</title>
+  <meta name="description" content="Manos de Quilla is the Barranquilla Chamber of Commerce division supporting artisan businesses in jewelry, weaving, hats, and handcrafted accessories. Join, explore current events, and discover member spotlights." />
+  <meta name="author" content="Roiman Romero" />
+
+  <!-- Favicon -->
+  <link rel="icon" type="image/svg+xml" href="images/favicon.svg" />
+
+  <!-- Facebook / Open Graph meta -->
+  <meta property="og:title" content="Manos de Quilla — Barranquilla Chamber of Commerce" />
+  <meta property="og:description" content="Discover handmade jewelry, weaving, hats, and accessory businesses from artisans across Barranquilla, Colombia." />
+  <meta property="og:image" content="https://roimanromero.github.io/wdd231/chamber/images/social-share.svg" />
+  <meta property="og:url" content="https://roimanromero.github.io/wdd231/chamber/index.html" />
+  <meta property="og:type" content="website" />
+
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:wght@600;700&family=Work+Sans:wght@400;500;600;700&family=Space+Mono:wght@400;700&display=swap" rel="stylesheet" />
+
+  <!-- Styles: normalize first, then small (mobile-first), then larger (breakpoints) -->
+  <link rel="stylesheet" href="styles/normalize.css" />
+  <link rel="stylesheet" href="styles/small.css" />
+  <link rel="stylesheet" href="styles/larger.css" />
+</head>
+<body>
+
+  <header class="site-header">
+    <div class="header-inner">
+      <a href="index.html" class="brand">
+        <img src="images/favicon.svg" alt="Manos de Quilla logo" />
+        <span class="brand-text">
+          <span class="brand-name">Manos de Quilla</span>
+          <span class="brand-tag">Barranquilla Chamber of Commerce</span>
+        </span>
+      </a>
+
+      <button id="navToggle" class="nav-toggle" aria-expanded="false" aria-controls="primaryNav" aria-label="Toggle navigation menu">
+        <span></span>
+      </button>
+
+      <nav id="primaryNav" class="primary-nav">
+        <ul>
+          <li><a href="index.html" aria-current="page">Home</a></li>
+          <li><a href="discover.html">Discover</a></li>
+          <li><a href="directory.html">Directory</a></li>
+          <li><a href="join.html">Join</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main class="home-main">
+
+    <!-- Hero -->
+    <section class="hero">
+      <img src="images/hero-banner.svg" alt="Illustration of Barranquilla artisan jewelry, weaving, and Carnival motifs" class="hero-image" width="1200" height="520" />
+      <div class="hero-overlay">
+        <h1>Manos de Quilla</h1>
+        <p>Connecting Barranquilla's jewelry makers, weavers, and artisan entrepreneurs with the customers and partners who keep the craft alive.</p>
+        <a href="join.html" class="cta-button">Join the Chamber</a>
+      </div>
+    </section>
+
+    <!-- Current Events -->
+    <section class="events-section">
+      <h2>Current Events</h2>
+      <div class="events-grid">
+        <article class="event-card">
+          <p class="event-date"><span>Aug</span><span>02</span></p>
+          <div class="event-body">
+            <h3>Feria de Artesanos del Caribe</h3>
+            <p>Members showcase new jewelry and weaving collections at Parque Cultural del Caribe, 9am–5pm.</p>
+          </div>
+        </article>
+        <article class="event-card">
+          <p class="event-date"><span>Aug</span><span>14</span></p>
+          <div class="event-body">
+            <h3>Networking &amp; Coffee</h3>
+            <p>Monthly member meetup at the chamber office to discuss upcoming Carnival season orders.</p>
+          </div>
+        </article>
+        <article class="event-card">
+          <p class="event-date"><span>Sep</span><span>05</span></p>
+          <div class="event-body">
+            <h3>New Member Orientation</h3>
+            <p>A welcome session covering chamber benefits, marketing support, and the member directory.</p>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <!-- Weather -->
+    <section class="weather-section">
+      <h2>Barranquilla Weather</h2>
+      <div id="weatherWidget" class="weather-widget">
+        <p class="loading-message">Loading current weather…</p>
+      </div>
+    </section>
+
+    <!-- Spotlights -->
+    <section class="spotlights-section">
+      <h2>Member Spotlights</h2>
+      <div id="spotlightsGrid" class="spotlights-grid">
+        <p class="loading-message">Loading member spotlights…</p>
+      </div>
+    </section>
+
+  </main>
+
+  <footer class="site-footer">
+    <div class="footer-inner">
+      <div class="footer-contact">
+        <p class="footer-brand">Manos de Quilla</p>
+        <p>Barranquilla Chamber of Commerce · Artisan Division</p>
+        <p>Calle 72 #45-10, Riomar, Barranquilla, Atlántico, Colombia</p>
+        <p>Email: <a href="mailto:info@manosdequilla.example.com">info@manosdequilla.example.com</a> · Phone: 300 555 1200</p>
+      </div>
+      <div class="footer-dev">
+        <p>Roiman Romero</p>
+        <p>WDD 231 · Web Frontend Development I</p>
+        <p>&copy; <span id="currentYear"></span> Manos de Quilla</p>
+        <p>Last Modified: <span id="lastModified"></span></p>
+      </div>
+    </div>
+  </footer>
+
+  <script src="scripts/home.js"></script>
+</body>
+</html>
