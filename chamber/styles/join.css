@@ -1,0 +1,371 @@
+/* ==========================================================================
+   Manos de Quilla — join.css
+   Styles for join.html (application form + membership cards + modals)
+   and thankyou.html
+   ========================================================================== */
+
+/* ---------- Main wrapper ---------- */
+.join-main {
+  max-width: var(--max-width);
+  margin: 0 auto;
+  padding: 1.25rem 1rem 3rem;
+}
+
+.join-intro h1 {
+  font-size: 1.75rem;
+  color: var(--color-primary);
+}
+
+.join-intro p {
+  margin-top: 0.4rem;
+  max-width: 60ch;
+}
+
+.join-layout {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+  margin-top: 1.5rem;
+}
+
+/* On small screens, cards render below the form: this is simply the
+   markup order, since join-form-section comes first in the DOM. */
+
+.join-form-section,
+.membership-cards-section {
+  background-color: var(--color-surface);
+  border-radius: var(--radius);
+  box-shadow: var(--shadow);
+  padding: 1.25rem;
+}
+
+.join-form-section h2,
+.membership-cards-section h2 {
+  font-size: 1.2rem;
+  color: var(--color-primary);
+  margin-bottom: 1rem;
+}
+
+/* ---------- Form ---------- */
+.join-form {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 1rem;
+}
+
+.join-form label {
+  display: flex;
+  flex-direction: column;
+  gap: 0.35rem;
+  font-family: var(--font-mono);
+  font-size: 0.78rem;
+  text-transform: uppercase;
+  letter-spacing: 0.03em;
+  color: var(--color-secondary);
+}
+
+.join-form label.full-width {
+  grid-column: 1 / -1;
+}
+
+.join-form input,
+.join-form select,
+.join-form textarea {
+  font-family: var(--font-body);
+  font-size: 0.95rem;
+  text-transform: none;
+  letter-spacing: normal;
+  color: var(--color-text);
+  padding: 0.6rem 0.7rem;
+  border: 1px solid var(--color-border);
+  border-radius: 8px;
+  background-color: var(--color-bg);
+}
+
+.join-form input:focus,
+.join-form select:focus,
+.join-form textarea:focus {
+  outline: 2px solid var(--color-secondary);
+  outline-offset: 1px;
+}
+
+.join-form input:invalid:not(:placeholder-shown) {
+  border-color: var(--color-primary);
+}
+
+.join-form textarea {
+  resize: vertical;
+  min-height: 100px;
+}
+
+.submit-button {
+  justify-self: start;
+  padding: 0.75rem 1.6rem;
+  background-color: var(--color-primary);
+  color: var(--color-bg);
+  font-family: var(--font-heading);
+  font-weight: 700;
+  font-size: 1rem;
+  border: none;
+  border-radius: 999px;
+  box-shadow: var(--shadow);
+  cursor: pointer;
+  transition: transform 0.15s ease, background-color 0.15s ease;
+}
+
+.submit-button:hover,
+.submit-button:focus-visible {
+  background-color: #c9482f;
+  transform: translateY(-2px);
+}
+
+/* ---------- Membership cards ---------- */
+.membership-cards {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 1rem;
+}
+
+.membership-card {
+  background-color: var(--color-bg);
+  border-radius: var(--radius);
+  border-top: 4px solid var(--color-secondary);
+  padding: 1rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.4rem;
+  opacity: 0;
+  transform: translateY(14px);
+  animation: cardEntrance 0.6s ease forwards;
+}
+
+.membership-card h3 {
+  font-size: 1.05rem;
+}
+
+.card-price {
+  font-family: var(--font-mono);
+  font-size: 0.75rem;
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+  color: var(--color-secondary);
+}
+
+.membership-card p {
+  font-size: 0.88rem;
+}
+
+.card-np {
+  border-top-color: var(--color-secondary);
+  animation-delay: 0s;
+}
+
+.card-bronze {
+  border-top-color: #a4692f;
+  animation-delay: 0.15s;
+}
+
+.card-bronze .card-price {
+  color: #a4692f;
+}
+
+.card-silver {
+  border-top-color: #8a8f98;
+  animation-delay: 0.3s;
+}
+
+.card-silver .card-price {
+  color: #6b6f76;
+}
+
+.card-gold {
+  border-top-color: var(--color-accent);
+  animation-delay: 0.45s;
+}
+
+.card-gold .card-price {
+  color: #9a6c00;
+}
+
+@keyframes cardEntrance {
+  from {
+    opacity: 0;
+    transform: translateY(14px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.card-link {
+  align-self: flex-start;
+  margin-top: 0.3rem;
+  padding: 0.4rem 0.9rem;
+  font-family: var(--font-mono);
+  font-size: 0.75rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.03em;
+  color: var(--color-surface);
+  background-color: var(--color-secondary);
+  border: none;
+  border-radius: 999px;
+  cursor: pointer;
+  transition: background-color 0.15s ease, transform 0.15s ease;
+}
+
+.card-link:hover,
+.card-link:focus-visible {
+  background-color: #0e7274;
+  transform: translateY(-2px);
+}
+
+/* ---------- Modals ---------- */
+.membership-modal {
+  border: none;
+  border-radius: var(--radius);
+  box-shadow: var(--shadow);
+  padding: 1.5rem;
+  max-width: 420px;
+  width: 90vw;
+  background-color: var(--color-surface);
+  color: var(--color-text);
+}
+
+.membership-modal::backdrop {
+  background-color: rgba(34, 32, 29, 0.55);
+}
+
+.membership-modal h2 {
+  font-size: 1.2rem;
+  color: var(--color-primary);
+  margin-bottom: 0.75rem;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.modal-price {
+  font-family: var(--font-mono);
+  font-size: 0.7rem;
+  text-transform: uppercase;
+  color: var(--color-secondary);
+}
+
+.membership-modal ul {
+  list-style: disc;
+  padding-left: 1.25rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.4rem;
+  font-size: 0.9rem;
+  margin-bottom: 1.25rem;
+}
+
+.modal-close {
+  padding: 0.5rem 1.2rem;
+  background-color: var(--color-primary);
+  color: var(--color-bg);
+  font-family: var(--font-heading);
+  font-weight: 700;
+  border: none;
+  border-radius: 999px;
+  cursor: pointer;
+}
+
+.modal-close:hover,
+.modal-close:focus-visible {
+  background-color: #c9482f;
+}
+
+/* ---------- Thank you page ---------- */
+.thankyou-main {
+  max-width: var(--max-width);
+  margin: 0 auto;
+  padding: 2rem 1rem 3rem;
+  display: flex;
+  justify-content: center;
+}
+
+.thankyou-card {
+  background-color: var(--color-surface);
+  border-radius: var(--radius);
+  box-shadow: var(--shadow);
+  padding: 1.5rem;
+  max-width: 560px;
+  width: 100%;
+  text-align: center;
+}
+
+.thankyou-card h1 {
+  color: var(--color-primary);
+  font-size: 1.8rem;
+  margin-bottom: 0.5rem;
+}
+
+.thankyou-card > p {
+  margin-bottom: 1.25rem;
+}
+
+.submission-summary {
+  text-align: left;
+  border-top: 1px solid var(--color-border);
+  padding-top: 1rem;
+  margin-bottom: 1.5rem;
+}
+
+.summary-row {
+  display: flex;
+  justify-content: space-between;
+  gap: 1rem;
+  padding: 0.5rem 0;
+  border-bottom: 1px solid var(--color-border);
+  font-size: 0.9rem;
+}
+
+.summary-row dt {
+  font-family: var(--font-mono);
+  font-size: 0.72rem;
+  text-transform: uppercase;
+  letter-spacing: 0.03em;
+  color: var(--color-secondary);
+}
+
+.summary-row dd {
+  font-weight: 600;
+  text-align: right;
+  word-break: break-word;
+}
+
+/* ---------- Larger screens ---------- */
+@media (min-width: 768px) {
+  .join-intro h1 {
+    font-size: 2.25rem;
+  }
+
+  .join-layout {
+    flex-direction: row;
+    align-items: flex-start;
+  }
+
+  .join-form-section {
+    flex: 1 1 60%;
+    order: 1;
+  }
+
+  .membership-cards-section {
+    flex: 1 1 35%;
+    order: 2;
+  }
+
+  .join-form {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (min-width: 960px) {
+  .membership-cards {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}

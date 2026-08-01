@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Thank You | Manos de Quilla — Barranquilla Chamber of Commerce</title>
+  <meta name="description" content="Thank you for applying to join Manos de Quilla, the Barranquilla Chamber of Commerce division for artisan businesses." />
+  <meta name="author" content="Roiman Romero" />
+
+  <!-- Favicon -->
+  <link rel="icon" type="image/svg+xml" href="images/favicon.svg" />
+
+  <!-- Facebook / Open Graph meta -->
+  <meta property="og:title" content="Thank You — Manos de Quilla" />
+  <meta property="og:description" content="Your membership application has been received by Manos de Quilla, the Barranquilla Chamber of Commerce." />
+  <meta property="og:image" content="https://roimanromero.github.io/wdd231/chamber/images/social-share.svg" />
+  <meta property="og:url" content="https://roimanromero.github.io/wdd231/chamber/thankyou.html" />
+  <meta property="og:type" content="website" />
+
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:wght@600;700&family=Work+Sans:wght@400;500;600;700&family=Space+Mono:wght@400;700&display=swap" rel="stylesheet" />
+
+  <!-- Styles: normalize first, then small (mobile-first), then larger (breakpoints), then join page -->
+  <link rel="stylesheet" href="styles/normalize.css" />
+  <link rel="stylesheet" href="styles/small.css" />
+  <link rel="stylesheet" href="styles/larger.css" />
+  <link rel="stylesheet" href="styles/join.css" />
+</head>
+<body>
+
+  <header class="site-header">
+    <div class="header-inner">
+      <a href="index.html" class="brand">
+        <img src="images/favicon.svg" alt="Manos de Quilla logo" />
+        <span class="brand-text">
+          <span class="brand-name">Manos de Quilla</span>
+          <span class="brand-tag">Barranquilla Chamber of Commerce</span>
+        </span>
+      </a>
+
+      <button id="navToggle" class="nav-toggle" aria-expanded="false" aria-controls="primaryNav" aria-label="Toggle navigation menu">
+        <span></span>
+      </button>
+
+      <nav id="primaryNav" class="primary-nav">
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="discover.html">Discover</a></li>
+          <li><a href="directory.html">Directory</a></li>
+          <li><a href="join.html">Join</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main class="thankyou-main">
+    <div class="thankyou-card">
+      <h1>Thank You!</h1>
+      <p>Your application to join Manos de Quilla has been received. A member of our team will reach out to confirm your membership shortly.</p>
+
+      <dl class="submission-summary" id="submissionSummary">
+        <div class="summary-row">
+          <dt>First Name</dt>
+          <dd id="outFirstName">—</dd>
+        </div>
+        <div class="summary-row">
+          <dt>Last Name</dt>
+          <dd id="outLastName">—</dd>
+        </div>
+        <div class="summary-row">
+          <dt>Email</dt>
+          <dd id="outEmail">—</dd>
+        </div>
+        <div class="summary-row">
+          <dt>Mobile Number</dt>
+          <dd id="outMobilePhone">—</dd>
+        </div>
+        <div class="summary-row">
+          <dt>Business Name</dt>
+          <dd id="outOrgName">—</dd>
+        </div>
+        <div class="summary-row">
+          <dt>Submitted</dt>
+          <dd id="outTimestamp">—</dd>
+        </div>
+      </dl>
+
+      <a href="index.html" class="cta-button">Back to Home</a>
+    </div>
+  </main>
+
+  <footer class="site-footer">
+    <div class="footer-inner">
+      <div class="footer-contact">
+        <p class="footer-brand">Manos de Quilla</p>
+        <p>Barranquilla Chamber of Commerce · Artisan Division</p>
+        <p>Calle 72 #45-10, Riomar, Barranquilla, Atlántico, Colombia</p>
+        <p>Email: <a href="mailto:info@manosdequilla.example.com">info@manosdequilla.example.com</a> · Phone: 300 555 1200</p>
+      </div>
+      <div class="footer-dev">
+        <p>Roiman Romero</p>
+        <p>WDD 231 · Web Frontend Development I</p>
+        <p>&copy; <span id="currentYear"></span> Manos de Quilla</p>
+        <p>Last Modified: <span id="lastModified"></span></p>
+      </div>
+    </div>
+  </footer>
+
+  <script src="scripts/thankyou.js"></script>
+</body>
+</html>

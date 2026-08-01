@@ -1,0 +1,279 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Join | Manos de Quilla — Barranquilla Chamber of Commerce</title>
+  <meta name="description" content="Apply to join Manos de Quilla, the Barranquilla Chamber of Commerce division for jewelry, weaving, hats, and handcrafted accessory businesses. Choose your membership level and get started." />
+  <meta name="author" content="Roiman Romero" />
+
+  <!-- Favicon -->
+  <link rel="icon" type="image/svg+xml" href="images/favicon.svg" />
+
+  <!-- Facebook / Open Graph meta -->
+  <meta property="og:title" content="Join Manos de Quilla — Barranquilla Chamber of Commerce" />
+  <meta property="og:description" content="Apply for membership and connect your artisan business with Barranquilla's jewelry, weaving, hats, and handcrafted accessory community." />
+  <meta property="og:image" content="https://roimanromero.github.io/wdd231/chamber/images/social-share.svg" />
+  <meta property="og:url" content="https://roimanromero.github.io/wdd231/chamber/join.html" />
+  <meta property="og:type" content="website" />
+
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:wght@600;700&family=Work+Sans:wght@400;500;600;700&family=Space+Mono:wght@400;700&display=swap" rel="stylesheet" />
+
+  <!-- Styles: normalize first, then small (mobile-first), then larger (breakpoints), then join page -->
+  <link rel="stylesheet" href="styles/normalize.css" />
+  <link rel="stylesheet" href="styles/small.css" />
+  <link rel="stylesheet" href="styles/larger.css" />
+  <link rel="stylesheet" href="styles/join.css" />
+</head>
+<body>
+
+  <header class="site-header">
+    <div class="header-inner">
+      <a href="index.html" class="brand">
+        <img src="images/favicon.svg" alt="Manos de Quilla logo" />
+        <span class="brand-text">
+          <span class="brand-name">Manos de Quilla</span>
+          <span class="brand-tag">Barranquilla Chamber of Commerce</span>
+        </span>
+      </a>
+
+      <button id="navToggle" class="nav-toggle" aria-expanded="false" aria-controls="primaryNav" aria-label="Toggle navigation menu">
+        <span></span>
+      </button>
+
+      <nav id="primaryNav" class="primary-nav">
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="discover.html">Discover</a></li>
+          <li><a href="directory.html">Directory</a></li>
+          <li><a href="join.html" aria-current="page">Join</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main class="join-main">
+
+    <div class="join-intro">
+      <h1>Join Manos de Quilla</h1>
+      <p>Become a member of the Barranquilla Chamber of Commerce's artisan division. Fill out the application below and choose the membership level that fits your business.</p>
+    </div>
+
+    <div class="join-layout">
+
+      <!-- Application form -->
+      <section class="join-form-section" aria-labelledby="formHeading">
+        <h2 id="formHeading">Membership Application</h2>
+
+        <form action="thankyou.html" method="get" class="join-form" novalidate>
+
+          <label for="firstName">
+            First Name
+            <input
+              type="text"
+              id="firstName"
+              name="firstName"
+              title="Your first name"
+              autocomplete="given-name"
+              required
+            />
+          </label>
+
+          <label for="lastName">
+            Last Name
+            <input
+              type="text"
+              id="lastName"
+              name="lastName"
+              title="Your last name"
+              autocomplete="family-name"
+              required
+            />
+          </label>
+
+          <label for="orgTitle">
+            Organizational Title
+            <input
+              type="text"
+              id="orgTitle"
+              name="orgTitle"
+              title="Your title within your organization (letters, hyphens, and spaces only, minimum 7 characters)"
+              autocomplete="organization-title"
+              pattern="[A-Za-z\-\s]{7,}"
+            />
+          </label>
+
+          <label for="email">
+            Email Address
+            <input
+              type="email"
+              id="email"
+              name="email"
+              title="A valid email address"
+              autocomplete="email"
+              placeholder="you@example.com"
+              required
+            />
+          </label>
+
+          <label for="mobilePhone">
+            Mobile Phone Number
+            <input
+              type="tel"
+              id="mobilePhone"
+              name="mobilePhone"
+              title="Your mobile phone number"
+              autocomplete="tel"
+              required
+            />
+          </label>
+
+          <label for="orgName">
+            Business/Organization Name
+            <input
+              type="text"
+              id="orgName"
+              name="orgName"
+              title="The name of your business or organization"
+              autocomplete="organization"
+              required
+            />
+          </label>
+
+          <label for="membershipLevel">
+            Membership Level
+            <select id="membershipLevel" name="membershipLevel" title="Choose a membership level" required>
+              <option value="">Select a level…</option>
+              <option value="np">NP Membership (Non-Profit — Free)</option>
+              <option value="bronze">Bronze Membership</option>
+              <option value="silver">Silver Membership</option>
+              <option value="gold">Gold Membership</option>
+            </select>
+          </label>
+
+          <label for="orgDescription" class="full-width">
+            Business/Organization Description
+            <textarea
+              id="orgDescription"
+              name="orgDescription"
+              title="Briefly describe your business or organization"
+              rows="4"
+            ></textarea>
+          </label>
+
+          <input type="hidden" id="timestamp" name="timestamp" />
+
+          <input type="submit" value="Submit Application" class="submit-button" />
+
+        </form>
+      </section>
+
+      <!-- Membership level cards -->
+      <section class="membership-cards-section" aria-labelledby="cardsHeading">
+        <h2 id="cardsHeading">Membership Levels</h2>
+
+        <div class="membership-cards">
+
+          <article class="membership-card card-np">
+            <h3>NP Membership</h3>
+            <p class="card-price">Free</p>
+            <p>For registered non-profit organizations supporting local artisans.</p>
+            <button type="button" class="card-link" data-modal="npModal">Learn more</button>
+          </article>
+
+          <article class="membership-card card-bronze">
+            <h3>Bronze Membership</h3>
+            <p class="card-price">Entry Level</p>
+            <p>A great starting point for new artisan businesses.</p>
+            <button type="button" class="card-link" data-modal="bronzeModal">Learn more</button>
+          </article>
+
+          <article class="membership-card card-silver">
+            <h3>Silver Membership</h3>
+            <p class="card-price">Growing Businesses</p>
+            <p>More visibility and support as your business grows.</p>
+            <button type="button" class="card-link" data-modal="silverModal">Learn more</button>
+          </article>
+
+          <article class="membership-card card-gold">
+            <h3>Gold Membership</h3>
+            <p class="card-price">Full Benefits</p>
+            <p>Our top tier, with maximum exposure and support.</p>
+            <button type="button" class="card-link" data-modal="goldModal">Learn more</button>
+          </article>
+
+        </div>
+      </section>
+
+    </div>
+
+  </main>
+
+  <!-- Modals -->
+  <dialog id="npModal" class="membership-modal">
+    <h2>NP Membership <span class="modal-price">Free</span></h2>
+    <ul>
+      <li>Listing in the online member directory</li>
+      <li>Access to monthly networking events</li>
+      <li>Invitation to the New Member Orientation</li>
+      <li>Newsletter subscription</li>
+    </ul>
+    <button type="button" class="modal-close" autofocus>Close</button>
+  </dialog>
+
+  <dialog id="bronzeModal" class="membership-modal">
+    <h2>Bronze Membership</h2>
+    <ul>
+      <li>Listing in the online member directory</li>
+      <li>Access to monthly networking events</li>
+      <li>Discounted tickets to chamber events</li>
+      <li>Newsletter subscription</li>
+    </ul>
+    <button type="button" class="modal-close" autofocus>Close</button>
+  </dialog>
+
+  <dialog id="silverModal" class="membership-modal">
+    <h2>Silver Membership</h2>
+    <ul>
+      <li>Everything in Bronze</li>
+      <li>Priority placement in the member directory</li>
+      <li>Access to chamber training workshops</li>
+      <li>One free event booth per year</li>
+    </ul>
+    <button type="button" class="modal-close" autofocus>Close</button>
+  </dialog>
+
+  <dialog id="goldModal" class="membership-modal">
+    <h2>Gold Membership</h2>
+    <ul>
+      <li>Everything in Silver</li>
+      <li>Spotlight placement on the chamber home page</li>
+      <li>Featured social media promotion</li>
+      <li>Unlimited event booths and free training</li>
+    </ul>
+    <button type="button" class="modal-close" autofocus>Close</button>
+  </dialog>
+
+  <footer class="site-footer">
+    <div class="footer-inner">
+      <div class="footer-contact">
+        <p class="footer-brand">Manos de Quilla</p>
+        <p>Barranquilla Chamber of Commerce · Artisan Division</p>
+        <p>Calle 72 #45-10, Riomar, Barranquilla, Atlántico, Colombia</p>
+        <p>Email: <a href="mailto:info@manosdequilla.example.com">info@manosdequilla.example.com</a> · Phone: 300 555 1200</p>
+      </div>
+      <div class="footer-dev">
+        <p>Roiman Romero</p>
+        <p>WDD 231 · Web Frontend Development I</p>
+        <p>&copy; <span id="currentYear"></span> Manos de Quilla</p>
+        <p>Last Modified: <span id="lastModified"></span></p>
+      </div>
+    </div>
+  </footer>
+
+  <script src="scripts/join.js"></script>
+</body>
+</html>
