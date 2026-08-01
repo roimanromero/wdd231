@@ -1,0 +1,393 @@
+/* ==========================================================================
+   PixelShelf — Site Plan
+   Palette: Cartridge Ink #14162B · Paper White #F1EEE5 · Cartridge Gold #F4B942
+            Power Teal #2FD9C4 · Combo Magenta #E4407D
+   Type: Press Start 2P (display) · Space Grotesk (body) · JetBrains Mono (utility)
+   ========================================================================== */
+
+:root {
+  --ink: #14162B;
+  --paper: #F1EEE5;
+  --gold: #F4B942;
+  --teal: #2FD9C4;
+  --magenta: #E4407D;
+
+  --font-display: 'Press Start 2P', monospace;
+  --font-body: 'Space Grotesk', sans-serif;
+  --font-mono: 'JetBrains Mono', monospace;
+
+  --max-width: 780px;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  background-color: var(--ink);
+  color: var(--paper);
+  font-family: var(--font-body);
+  line-height: 1.6;
+}
+
+h1, h2 {
+  font-family: var(--font-display);
+  color: var(--gold);
+  line-height: 1.5;
+}
+
+a {
+  color: var(--teal);
+}
+
+:focus-visible {
+  outline: 3px solid var(--teal);
+  outline-offset: 2px;
+}
+
+.mono {
+  font-family: var(--font-mono);
+}
+
+/* ---------- Title screen ---------- */
+.title-screen {
+  position: relative;
+  padding: 4rem 1.25rem 3rem;
+  text-align: center;
+  overflow: hidden;
+  border-bottom: 3px solid var(--gold);
+}
+
+.scanlines {
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  background: repeating-linear-gradient(
+    to bottom,
+    rgba(241, 238, 229, 0.04) 0px,
+    rgba(241, 238, 229, 0.04) 1px,
+    transparent 1px,
+    transparent 3px
+  );
+}
+
+.title-inner {
+  position: relative;
+  max-width: var(--max-width);
+  margin: 0 auto;
+}
+
+.eyebrow {
+  font-family: var(--font-mono);
+  font-size: 0.7rem;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--teal);
+  margin-bottom: 0.75rem;
+}
+
+.title-screen h1 {
+  font-size: 1.8rem;
+  margin: 0 0 1rem;
+}
+
+.subtitle {
+  color: var(--paper);
+  opacity: 0.85;
+  font-size: 0.95rem;
+  max-width: 46ch;
+  margin: 0 auto 1.75rem;
+}
+
+.press-start {
+  display: inline-block;
+  font-family: var(--font-mono);
+  font-size: 0.8rem;
+  letter-spacing: 0.05em;
+  color: var(--gold);
+  animation: blink 1.4s steps(1) infinite;
+}
+
+@keyframes blink {
+  0%, 49% { opacity: 1; }
+  50%, 100% { opacity: 0.25; }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .press-start {
+    animation: none;
+  }
+}
+
+/* ---------- Main / panels ---------- */
+main {
+  max-width: var(--max-width);
+  margin: 0 auto;
+  padding: 2.5rem 1.25rem 4rem;
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+
+.panel {
+  position: relative;
+  background-color: rgba(241, 238, 229, 0.03);
+  border: 1px solid rgba(244, 185, 66, 0.35);
+  padding: 1.75rem 1.5rem;
+}
+
+/* HUD-style corner brackets — the signature element */
+.panel::before,
+.panel::after {
+  content: "";
+  position: absolute;
+  width: 14px;
+  height: 14px;
+  border: 3px solid var(--gold);
+}
+
+.panel::before {
+  top: -3px;
+  left: -3px;
+  border-right: none;
+  border-bottom: none;
+}
+
+.panel::after {
+  bottom: -3px;
+  right: -3px;
+  border-left: none;
+  border-top: none;
+}
+
+.panel h2 {
+  font-size: 1.05rem;
+  margin: 0 0 1rem;
+}
+
+.panel p {
+  margin: 0 0 0.9rem;
+}
+
+.panel p:last-child {
+  margin-bottom: 0;
+}
+
+.section-intro {
+  opacity: 0.85;
+}
+
+.fine-print {
+  font-family: var(--font-mono);
+  font-size: 0.72rem;
+  opacity: 0.6;
+}
+
+.domain-tag {
+  display: flex;
+  align-items: center;
+  gap: 0.6rem;
+  flex-wrap: wrap;
+}
+
+.badge {
+  font-family: var(--font-mono);
+  font-size: 0.65rem;
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+  color: var(--ink);
+  background-color: var(--teal);
+  padding: 0.15rem 0.5rem;
+  border-radius: 999px;
+}
+
+/* ---------- Scenarios ---------- */
+.scenario-list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.scenario-list li {
+  display: flex;
+  gap: 0.9rem;
+  align-items: baseline;
+  border-left: 2px solid var(--magenta);
+  padding-left: 0.9rem;
+}
+
+.scenario-list p {
+  margin: 0;
+}
+
+.quest-tag {
+  flex-shrink: 0;
+  font-family: var(--font-mono);
+  font-size: 0.65rem;
+  letter-spacing: 0.05em;
+  color: var(--magenta);
+  white-space: nowrap;
+}
+
+/* ---------- Color swatches ---------- */
+.swatch-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 1rem;
+}
+
+.swatch-card {
+  display: flex;
+  flex-direction: column;
+  gap: 0.25rem;
+}
+
+.swatch {
+  width: 100%;
+  height: 60px;
+  border: 1px solid rgba(241, 238, 229, 0.25);
+}
+
+.swatch-name {
+  font-weight: 600;
+  margin: 0.4rem 0 0;
+}
+
+.swatch-card .mono {
+  font-size: 0.75rem;
+  opacity: 0.75;
+  margin: 0;
+}
+
+.swatch-use {
+  font-size: 0.82rem;
+  opacity: 0.85;
+  margin: 0.2rem 0 0;
+}
+
+/* ---------- Typography samples ---------- */
+.type-sample {
+  padding: 1rem 0;
+  border-top: 1px solid rgba(241, 238, 229, 0.15);
+}
+
+.type-sample:first-of-type {
+  border-top: none;
+  padding-top: 0;
+}
+
+.type-role {
+  font-family: var(--font-mono);
+  font-size: 0.7rem;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  color: var(--teal);
+  margin: 0 0 0.6rem;
+}
+
+.type-demo {
+  margin: 0 0 0.6rem;
+}
+
+.type-display {
+  font-family: var(--font-display);
+  font-size: 1.3rem;
+  color: var(--gold);
+}
+
+.type-body {
+  font-family: var(--font-body);
+  font-size: 1.05rem;
+}
+
+.type-mono {
+  font-family: var(--font-mono);
+  font-size: 0.9rem;
+  color: var(--paper);
+}
+
+.type-note {
+  font-size: 0.82rem;
+  opacity: 0.75;
+  margin: 0;
+}
+
+/* ---------- Wireframe placeholders ---------- */
+.wireframe-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 1.25rem;
+}
+
+.wireframe-slot {
+  margin: 0;
+}
+
+.wireframe-placeholder {
+  border: 2px dashed rgba(244, 185, 66, 0.5);
+  padding: 2.5rem 1rem;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  gap: 0.4rem;
+  justify-content: center;
+  min-height: 160px;
+}
+
+.wireframe-placeholder img {
+  display: block;
+  max-width: 100%;
+  height: auto;
+  margin: 0 auto;
+}
+
+.wireframe-placeholder p {
+  margin: 0;
+}
+
+.wireframe-placeholder .mono {
+  font-size: 0.72rem;
+  opacity: 0.65;
+}
+
+figcaption {
+  font-family: var(--font-mono);
+  font-size: 0.72rem;
+  text-align: center;
+  margin-top: 0.5rem;
+  opacity: 0.7;
+}
+
+/* ---------- Footer ---------- */
+.site-footer {
+  text-align: center;
+  padding: 1.5rem 1rem 2.5rem;
+  font-family: var(--font-mono);
+  font-size: 0.72rem;
+  opacity: 0.6;
+  border-top: 1px solid rgba(244, 185, 66, 0.25);
+}
+
+/* ---------- Larger screens ---------- */
+@media (min-width: 700px) {
+  .title-screen h1 {
+    font-size: 2.4rem;
+  }
+
+  .panel {
+    padding: 2.25rem 2.5rem;
+  }
+
+  .swatch-grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+
+  .wireframe-grid {
+    grid-template-columns: 1fr 1.4fr;
+    align-items: start;
+  }
+}

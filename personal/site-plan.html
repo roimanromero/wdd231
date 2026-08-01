@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Site Plan — PixelShelf</title>
+  <meta name="description" content="Website plan for PixelShelf, a video game library and discovery site." />
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&family=Space+Grotesk:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500;700&display=swap" rel="stylesheet" />
+
+  <link rel="stylesheet" href="site-plan.css" />
+</head>
+<body>
+
+  <header class="title-screen">
+    <div class="scanlines" aria-hidden="true"></div>
+    <div class="title-inner">
+      <p class="eyebrow">INDIVIDUAL PROJECT — SITE PLAN</p>
+      <h1>PixelShelf</h1>
+      <p class="subtitle">A video game library, built one cartridge at a time.</p>
+      <div class="press-start" aria-hidden="true">▶ PRESS START</div>
+    </div>
+  </header>
+
+  <main>
+
+    <!-- LEVEL 01 — SITE NAME -->
+    <section class="panel" aria-labelledby="siteNameHeading">
+      <p class="eyebrow">LEVEL 01 // SITE NAME</p>
+      <h2 id="siteNameHeading">PixelShelf</h2>
+      <p>
+        The name pairs two ideas the project rests on: <strong>pixel</strong>, a nod to gaming's
+        visual heritage across every era and platform the library covers, and
+        <strong>shelf</strong>, the familiar image of a library or collection where each game has
+        its place, in and out of case, alphabetized. Together they describe exactly what the site
+        does &mdash; it's a shelf, rendered in pixels.
+      </p>
+      <p class="domain-tag">
+        Optional domain: <span class="mono">pixelshelf.gg</span>
+        <span class="badge">available*</span>
+      </p>
+      <p class="fine-print">*Availability not verified for this class exercise.</p>
+    </section>
+
+    <!-- LEVEL 02 — SITE PURPOSE -->
+    <section class="panel" aria-labelledby="purposeHeading">
+      <p class="eyebrow">LEVEL 02 // SITE PURPOSE</p>
+      <h2 id="purposeHeading">Site Purpose</h2>
+      <p>
+        PixelShelf is an informational hub where visitors browse, search, and filter a curated
+        collection of video games spanning genres and platforms. Each entry surfaces the details
+        that matter when deciding what to play next &mdash; title, genre, platform, release year,
+        developer, rating, and a short description &mdash; with deeper detail available through an
+        interactive modal dialog. Game data loads dynamically from a local JSON file, and visitors
+        can save titles that catch their eye to a personal favorites list stored in the browser,
+        no account required.
+      </p>
+    </section>
+
+    <!-- LEVEL 03 — SCENARIOS -->
+    <section class="panel" aria-labelledby="scenariosHeading">
+      <p class="eyebrow">LEVEL 03 // SCENARIOS</p>
+      <h2 id="scenariosHeading">Scenarios</h2>
+      <p class="section-intro">Questions a visitor might bring to the site:</p>
+      <ol class="scenario-list">
+        <li>
+          <span class="quest-tag">QUEST 1</span>
+          <p>"I loved a platformer on the SNES years ago &mdash; what other games in that genre
+          and era does the library have?"</p>
+        </li>
+        <li>
+          <span class="quest-tag">QUEST 2</span>
+          <p>"I want to compare a few RPGs across different platforms before deciding what to
+          play next &mdash; can I see them side by side?"</p>
+        </li>
+        <li>
+          <span class="quest-tag">QUEST 3</span>
+          <p>"How do I keep a shortlist of games I'm interested in without creating an
+          account?"</p>
+        </li>
+      </ol>
+    </section>
+
+    <!-- LEVEL 04 — COLOR SCHEME -->
+    <section class="panel" aria-labelledby="colorHeading">
+      <p class="eyebrow">LEVEL 04 // COLOR SCHEME</p>
+      <h2 id="colorHeading">Color Scheme</h2>
+      <p class="section-intro">
+        This plan document is styled exclusively in the palette below &mdash; what you see on this
+        page is the palette in use, not a mockup of it.
+      </p>
+
+      <div class="swatch-grid">
+        <div class="swatch-card">
+          <div class="swatch" style="background:#14162B;"></div>
+          <p class="swatch-name">Cartridge Ink</p>
+          <p class="mono">#14162B</p>
+          <p class="swatch-use">Page background, footer, dark panel fills</p>
+        </div>
+        <div class="swatch-card">
+          <div class="swatch" style="background:#F1EEE5;"></div>
+          <p class="swatch-name">Paper White</p>
+          <p class="mono">#F1EEE5</p>
+          <p class="swatch-use">Body text on dark backgrounds, panel surfaces</p>
+        </div>
+        <div class="swatch-card">
+          <div class="swatch" style="background:#F4B942;"></div>
+          <p class="swatch-name">Cartridge Gold</p>
+          <p class="mono">#F4B942</p>
+          <p class="swatch-use">Headings, eyebrow labels, primary emphasis</p>
+        </div>
+        <div class="swatch-card">
+          <div class="swatch" style="background:#2FD9C4;"></div>
+          <p class="swatch-name">Power Teal</p>
+          <p class="mono">#2FD9C4</p>
+          <p class="swatch-use">Links, borders, secondary accents, focus states</p>
+        </div>
+        <div class="swatch-card">
+          <div class="swatch" style="background:#E4407D;"></div>
+          <p class="swatch-name">Combo Magenta</p>
+          <p class="mono">#E4407D</p>
+          <p class="swatch-use">Quest tags, badges, sparing high-priority accents</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- LEVEL 05 — TYPOGRAPHY -->
+    <section class="panel" aria-labelledby="typeHeading">
+      <p class="eyebrow">LEVEL 05 // TYPOGRAPHY</p>
+      <h2 id="typeHeading">Typography</h2>
+      <p class="section-intro">Three faces, three jobs:</p>
+
+      <div class="type-sample">
+        <p class="type-role">Display &mdash; Press Start 2P</p>
+        <p class="type-demo type-display">PixelShelf</p>
+        <p class="type-note">Used only for the site name and section headings &mdash; a pixel
+        typeface reads as a display accent here, not body copy, since it's slow to read at
+        length.</p>
+      </div>
+
+      <div class="type-sample">
+        <p class="type-role">Body &mdash; Space Grotesk</p>
+        <p class="type-demo type-body">Browse the collection, search by genre or platform, and
+        open any title to see its full detail card.</p>
+        <p class="type-note">Used for all paragraph text, list content, and descriptions &mdash;
+        a clean geometric sans that stays readable at length.</p>
+      </div>
+
+      <div class="type-sample">
+        <p class="type-role">Utility &mdash; JetBrains Mono</p>
+        <p class="type-demo type-mono">RATING 4.5 / PLATFORM SNES / YEAR 1994</p>
+        <p class="type-note">Used for data-like fragments &mdash; hex codes, quest tags, game
+        stats &mdash; echoing the HUD text of an in-game menu.</p>
+      </div>
+    </section>
+
+    <!-- LEVEL 06 — WIREFRAME -->
+    <section class="panel" aria-labelledby="wireframeHeading">
+      <p class="eyebrow">LEVEL 06 // WIREFRAME</p>
+      <h2 id="wireframeHeading">Wireframe</h2>
+      <p class="section-intro">
+        Home page layout, sketched by hand for small and large viewports. Per the assignment
+        requirements, these are hand-drawn sketches (photographed or scanned) &mdash; not
+        AI-generated mockups.
+      </p>
+
+      <div class="wireframe-grid">
+        <figure class="wireframe-slot">
+          <div class="wireframe-placeholder">
+            <p></p>
+              <img src="images/wireframe-small.jpeg" alt="Wireframe of small view page" />
+          </div>
+          <figcaption>Home page &mdash; small screen</figcaption>
+        </figure>
+        <figure class="wireframe-slot wireframe-slot--wide">
+          <div class="wireframe-placeholder">
+            <p></p>
+              <img src="images/wireframe-large.jpeg" alt="Wireframe of large view page" />
+          </div>
+          <figcaption>Home page &mdash; large screen</figcaption>
+        </figure>
+      </div>
+      <p class="fine-print">
+        *Hand-drawn sketches, photographed or scanned for inclusion in this plan.
+      </p>
+    </section>
+
+  </main>
+
+  <footer class="site-footer">
+    <p>PixelShelf &mdash; Individual Project Site Plan</p>
+  </footer>
+
+</body>
+</html>
