@@ -13,6 +13,38 @@
   }
 }
 
+/* ---------- Discover: medium screens (641px–1024px) ----------
+   Two columns. Card 1 becomes a full-width feature banner and card 8
+   becomes a full-width closing feature — a genuinely different shape
+   from the stacked mobile layout, not just an extra column. */
+@media (min-width: 641px) {
+  .discover-grid {
+    grid-template-columns: 1fr 1fr;
+    grid-template-areas:
+      "area-1 area-1"
+      "area-2 area-3"
+      "area-4 area-5"
+      "area-6 area-7"
+      "area-8 area-8";
+  }
+
+  .discover-card:nth-child(1),
+  .discover-card:nth-child(8) {
+    flex-direction: row;
+  }
+
+  .discover-card:nth-child(1) figure,
+  .discover-card:nth-child(8) figure {
+    width: 42%;
+    flex-shrink: 0;
+  }
+
+  .discover-card:nth-child(1) img,
+  .discover-card:nth-child(8) img {
+    height: 100%;
+  }
+}
+
 @media (min-width: 640px) {
   .events-grid {
     grid-template-columns: repeat(2, 1fr);
@@ -132,5 +164,46 @@
   .directory-list.list-view .member-card img {
     width: 130px;
     height: 100px;
+  }
+}
+
+/* ---------- Discover: large screens (1025px and up) ----------
+   Four-column mosaic. Card 1 spans two columns and card 6 spans two
+   rows, producing a layout shape that a simple column count could
+   not — this is a distinct grid-template-areas map, not "medium
+   plus more columns". */
+@media (min-width: 1025px) {
+  .discover-grid {
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-areas:
+      "area-1 area-1 area-2 area-3"
+      "area-4 area-5 area-6 area-6"
+      "area-7 area-8 area-6 area-6";
+  }
+
+  .discover-card:nth-child(1),
+  .discover-card:nth-child(8) {
+    flex-direction: column;
+  }
+
+  .discover-card:nth-child(1) figure,
+  .discover-card:nth-child(8) figure {
+    width: auto;
+  }
+
+  .discover-card:nth-child(1) img,
+  .discover-card:nth-child(6) img,
+  .discover-card:nth-child(8) img {
+    height: 150px;
+  }
+
+  .discover-card:nth-child(6) {
+    flex-direction: column;
+  }
+
+  .discover-card:nth-child(6) figure,
+  .discover-card:nth-child(6) img {
+    height: 100%;
+    min-height: 220px;
   }
 }
