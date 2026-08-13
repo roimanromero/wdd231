@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>RetroVault | Hardware Catalog</title>
+  <meta name="description" content="Browse our dynamic database of vintage video game consoles with detailed hardware specs, release dates, and generation filters.">
+  <meta name="author" content="Roiman Alfonso Romero de Moya">
+
+  <meta property="og:title" content="RetroVault Hardware Catalog">
+  <meta property="og:type" content="website">
+  <meta property="og:image" content="images/consoles.webp">
+  <meta property="og:url" content="https://roimanromero.github.io/wdd231/final/catalog.html">
+
+  <link rel="icon" href="images/favicon.ico" type="image/x-icon">
+  <link rel="stylesheet" href="css/styles.css">
+  <script type="module" src="js/catalog.js"></script>
+</head>
+<body>
+  <header>
+    <div class="logo-container">
+      <img src="images/other.webp" alt="RetroVault Logo" width="50" height="50">
+      <span>RetroVault</span>
+    </div>
+    <button id="hamburger" aria-label="Toggle Navigation Menu">&#9776;</button>
+    <nav id="primary-nav">
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="catalog.html" class="active">Console Catalog</a></li>
+        <li><a href="contact.html">Contact Us</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+    <section class="catalog-header">
+      <h1>Retro Hardware Catalog</h1>
+      <p>Filter through classic systems and explore hardware specifications.</p>
+      
+      <div class="controls">
+        <label for="filter-select">Filter by Type:</label>
+        <select id="filter-select">
+          <option value="all">All Hardware</option>
+          <option value="Home Console">Home Consoles</option>
+          <option value="Handheld">Handhelds</option>
+        </select>
+        <p id="counter">Showing 0 items</p>
+      </div>
+    </section>
+
+    <section id="catalog-grid" class="card-grid">
+      <!-- Dynamically generated via Fetch API -->
+    </section>
+
+    <dialog id="details-modal">
+      <div class="modal-content">
+        <h2 id="modal-title">Console Name</h2>
+        <p id="modal-body">Details...</p>
+        <button id="modal-close-btn" class="btn">Close</button>
+      </div>
+    </dialog>
+  </main>
+
+  <footer>
+    <p>&copy; 2026 RetroVault | Roiman Alfonso Romero de Moya | Barranquilla, Colombia</p>
+    <p><a href="https://youtu.be/PLACEHOLDER" target="_blank" rel="noopener">Video Demonstration</a></p>
+  </footer>
+</body>
+</html>

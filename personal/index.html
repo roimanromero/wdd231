@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>RetroVault | Home - Vintage Video Game Consoles</title>
+  <meta name="description" content="Discover, explore, and preserve the golden era of vintage gaming consoles and classic retro hardware at RetroVault.">
+  <meta name="author" content="Roiman Alfonso Romero de Moya">
+  
+  <!-- Open Graph / Social Sharing -->
+  <meta property="og:title" content="RetroVault - Vintage Video Game Consoles">
+  <meta property="og:type" content="website">
+  <meta property="og:image" content="images/hero.webp">
+  <meta property="og:url" content="https://roimanromero.github.io/wdd231/final/index.html">
+  <meta property="og:description" content="Explore and preserve classic video game consoles with RetroVault.">
+
+  <link rel="icon" href="images/favicon.ico" type="image/x-icon">
+  <link rel="stylesheet" href="css/styles.css">
+  <script type="module" src="js/main.js"></script>
+</head>
+<body>
+  <header>
+    <div class="logo-container">
+      <img src="images/other.webp" alt="RetroVault Logo" width="50" height="50">
+      <span>RetroVault</span>
+    </div>
+    <button id="hamburger" aria-label="Toggle Navigation Menu">&#9776;</button>
+    <nav id="primary-nav">
+      <ul>
+        <li><a href="index.html" class="active">Home</a></li>
+        <li><a href="catalog.html">Console Catalog</a></li>
+        <li><a href="contact.html">Contact Us</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+    <section class="hero">
+      <img src="images/hero.webp" alt="Retro Video Games Showcase" width="1200" height="400" priority>
+      <div class="hero-content">
+        <h1>Preserving Video Game History</h1>
+        <p>Explore classic hardware, specifications, and iconic gaming systems.</p>
+        <a href="catalog.html" class="btn">Browse Catalog</a>
+      </div>
+    </section>
+
+    <section class="highlights">
+      <h2>Featured Categories</h2>
+      <div class="card-grid">
+        <article class="card">
+          <img src="images/consoles.webp" alt="Classic Consoles" width="400" height="250" loading="lazy">
+          <h3>Home Consoles</h3>
+          <p>From the Atari 2600 to the Nintendo 64 and PlayStation—relive home gaming history.</p>
+        </article>
+        <article class="card">
+          <img src="images/controls.webp" alt="Game Controllers" width="400" height="250" loading="lazy">
+          <h3>Handheld Hardware</h3>
+          <p>Iconic portable machines like the Game Boy, Game Gear, and PSP.</p>
+        </article>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <p>&copy; 2026 RetroVault | Roiman Alfonso Romero de Moya | Barranquilla, Colombia</p>
+    <p><a href="https://youtu.be/PLACEHOLDER" target="_blank" rel="noopener">Video Demonstration</a> | <a href="#attributions-modal" id="attributions-link">Attributions</a></p>
+  </footer>
+
+  <!-- Modal for Attributions -->
+  <dialog id="attributions-modal">
+    <div class="modal-content">
+      <h2>Content & Image Attributions</h2>
+      <p>All console specifications and image assets are utilized for educational purposes under fair use.</p>
+      <ul>
+        <li>Console Data Source: Internal JSON archive / Public Domain Tech DB</li>
+        <li>Hero & Card Photography: Unsplash & Wikimedia Commons (CC-BY-SA)</li>
+      </ul>
+      <button id="close-modal" class="btn">Close</button>
+    </div>
+  </dialog>
+</body>
+</html>

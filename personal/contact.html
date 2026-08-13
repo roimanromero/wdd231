@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>RetroVault | Contact Us</title>
+  <meta name="description" content="Get in touch with the RetroVault community to submit retro hardware suggestions or report archive inaccuracies.">
+  <meta name="author" content="Roiman Alfonso Romero de Moya">
+
+  <link rel="icon" href="images/favicon.ico" type="image/x-icon">
+  <link rel="stylesheet" href="css/styles.css">
+  <script type="module" src="js/contact.js"></script>
+</head>
+<body>
+  <header>
+    <div class="logo-container">
+      <img src="images/other.webp" alt="RetroVault Logo" width="50" height="50">
+      <span>RetroVault</span>
+    </div>
+    <button id="hamburger" aria-label="Toggle Navigation Menu">&#9776;</button>
+    <nav id="primary-nav">
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="catalog.html">Console Catalog</a></li>
+        <li><a href="contact.html" class="active">Contact Us</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+    <section class="form-section">
+      <h1>Contact the Vault</h1>
+      <p>Have hardware details to submit or questions about vintage gaming?</p>
+      
+      <form action="confirmation.html" method="get" class="custom-form">
+        <label for="fname">First Name *</label>
+        <input type="text" id="fname" name="fname" required>
+
+        <label for="lname">Last Name *</label>
+        <input type="text" id="lname" name="lname" required>
+
+        <label for="email">Email Address *</label>
+        <input type="email" id="email" name="email" required placeholder="name@example.com">
+
+        <label for="category">Inquiry Subject</label>
+        <select id="category" name="category">
+          <option value="Hardware Suggestion">Hardware Suggestion</option>
+          <option value="Data Correction">Data Correction</option>
+          <option value="General Inquiry">General Inquiry</option>
+        </select>
+
+        <label for="message">Message *</label>
+        <textarea id="message" name="message" rows="5" required></required></textarea>
+
+        <button type="submit" class="btn">Send Message</button>
+      </form>
+    </section>
+  </main>
+
+  <footer>
+    <p>&copy; 2026 RetroVault | Roiman Alfonso Romero de Moya | Barranquilla, Colombia</p>
+    <p><a href="https://youtu.be/PLACEHOLDER" target="_blank" rel="noopener">Video Demonstration</a></p>
+  </footer>
+</body>
+</html>

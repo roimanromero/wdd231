@@ -1,0 +1,137 @@
+[
+  {
+    "id": "nes",
+    "name": "Nintendo Entertainment System (NES)",
+    "manufacturer": "Nintendo",
+    "releaseYear": 1985,
+    "type": "Home Console",
+    "unitsSold": "61.91 Million",
+    "image": "images/consoles.webp"
+  },
+  {
+    "id": "sms",
+    "name": "Sega Master System",
+    "manufacturer": "Sega",
+    "releaseYear": 1985,
+    "type": "Home Console",
+    "unitsSold": "13.00 Million",
+    "image": "images/consoles.webp"
+  },
+  {
+    "id": "snes",
+    "name": "Super Nintendo (SNES)",
+    "manufacturer": "Nintendo",
+    "releaseYear": 1990,
+    "type": "Home Console",
+    "unitsSold": "49.10 Million",
+    "image": "images/consoles.webp"
+  },
+  {
+    "id": "genesis",
+    "name": "Sega Genesis / Mega Drive",
+    "manufacturer": "Sega",
+    "releaseYear": 1988,
+    "type": "Home Console",
+    "unitsSold": "30.50 Million",
+    "image": "images/consoles.webp"
+  },
+  {
+    "id": "gb",
+    "name": "Game Boy",
+    "manufacturer": "Nintendo",
+    "releaseYear": 1989,
+    "type": "Handheld",
+    "unitsSold": "118.69 Million",
+    "image": "images/controls.webp"
+  },
+  {
+    "id": "gg",
+    "name": "Sega Game Gear",
+    "manufacturer": "Sega",
+    "releaseYear": 1990,
+    "type": "Handheld",
+    "unitsSold": "10.62 Million",
+    "image": "images/controls.webp"
+  },
+  {
+    "id": "ps1",
+    "name": "PlayStation",
+    "manufacturer": "Sony",
+    "releaseYear": 1994,
+    "type": "Home Console",
+    "unitsSold": "102.49 Million",
+    "image": "images/consoles.webp"
+  },
+  {
+    "id": "n64",
+    "name": "Nintendo 64",
+    "manufacturer": "Nintendo",
+    "releaseYear": 1996,
+    "type": "Home Console",
+    "unitsSold": "32.93 Million",
+    "image": "images/consoles.webp"
+  },
+  {
+    "id": "saturn",
+    "name": "Sega Saturn",
+    "manufacturer": "Sega",
+    "releaseYear": 1994,
+    "type": "Home Console",
+    "unitsSold": "9.26 Million",
+    "image": "images/consoles.webp"
+  },
+  {
+    "id": "dreamcast",
+    "name": "Sega Dreamcast",
+    "manufacturer": "Sega",
+    "releaseYear": 1998,
+    "type": "Home Console",
+    "unitsSold": "9.13 Million",
+    "image": "images/consoles.webp"
+  },
+  {
+    "id": "ps2",
+    "name": "PlayStation 2",
+    "manufacturer": "Sony",
+    "releaseYear": 2000,
+    "type": "Home Console",
+    "unitsSold": "155.00 Million",
+    "image": "images/consoles.webp"
+  },
+  {
+    "id": "gba",
+    "name": "Game Boy Advance",
+    "manufacturer": "Nintendo",
+    "releaseYear": 2001,
+    "type": "Handheld",
+    "unitsSold": "81.51 Million",
+    "image": "images/controls.webp"
+  },
+  {
+    "id": "gc",
+    "name": "Nintendo GameCube",
+    "manufacturer": "Nintendo",
+    "releaseYear": 2001,
+    "type": "Home Console",
+    "unitsSold": "21.74 Million",
+    "image": "images/consoles.webp"
+  },
+  {
+    "id": "xbox",
+    "name": "Xbox",
+    "manufacturer": "Microsoft",
+    "releaseYear": 2001,
+    "type": "Home Console",
+    "unitsSold": "24.00 Million",
+    "image": "images/consoles.webp"
+  },
+  {
+    "id": "psp",
+    "name": "PlayStation Portable (PSP)",
+    "manufacturer": "Sony",
+    "releaseYear": 2004,
+    "type": "Handheld",
+    "unitsSold": "80.00 Million",
+    "image": "images/controls.webp"
+  }
+]

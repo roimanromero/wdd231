@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>RetroVault | Submission Received</title>
+  <link rel="icon" href="images/favicon.ico" type="image/x-icon">
+  <link rel="stylesheet" href="css/styles.css">
+  <script type="module" src="js/main.js"></script>
+</head>
+<body>
+  <header>
+    <div class="logo-container">
+      <img src="images/other.webp" alt="RetroVault Logo" width="50" height="50">
+      <span>RetroVault</span>
+    </div>
+  </header>
+
+  <main>
+    <section class="confirmation-container">
+      <h1>Thank You!</h1>
+      <p>Your message has been received. Here are the details you provided:</p>
+      <div id="results" class="results-box"></div>
+      <a href="index.html" class="btn">Return Home</a>
+    </section>
+  </main>
+
+  <footer>
+    <p>&copy; 2026 RetroVault | Roiman Alfonso Romero de Moya</p>
+  </footer>
+
+  <script>
+    const urlParams = new URLSearchParams(window.location.search);
+    const resultsContainer = document.getElementById('results');
+    if (urlParams.has('fname')) {
+      resultsContainer.innerHTML = `
+        <p><strong>Name:</strong> ${urlParams.get('fname')} ${urlParams.get('lname')}</p>
+        <p><strong>Email:</strong> ${urlParams.get('email')}</p>
+        <p><strong>Subject:</strong> ${urlParams.get('category')}</p>
+        <p><strong>Message:</strong> ${urlParams.get('message')}</p>
+      `;
+    }
+  </script>
+</body>
+</html>
